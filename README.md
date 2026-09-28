@@ -1,3 +1,3 @@
 # SpringLensAI
 
-## Spring + NextJs + Docker
+## Java + SpringBoot + TypeScript + NextJS + Docker
