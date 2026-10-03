@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -51,10 +52,24 @@ public class User {
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
 
-    @PrePersist 
-    void onCreate() {
-        if(createdAt == null) {
-            createdAt = Instant.now();
+    @Column(name = "updated_at", nullable = false)
+    private Instant updatedAt;
+
+    @PrePersist
+    private void onCreate() {
+        Instant now = Instant.now();
+
+        if (createdAt == null) {
+            createdAt = now;
         }
+
+        if (updatedAt == null) {
+            updatedAt = now;
+        }
+    }
+
+    @PreUpdate
+    private void onUpdate() {
+        updatedAt = Instant.now();
     }
 }
