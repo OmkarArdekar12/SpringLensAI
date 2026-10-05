@@ -2,8 +2,10 @@ package com.springlensai.server.config;
 
 import java.util.concurrent.Executor;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.client.RestClient;
@@ -11,8 +13,9 @@ import org.springframework.web.client.RestClient;
 @Configuration
 @EnableAsync
 public class AppConfig {
-    
+
     @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     RestClient.Builder restClientBuilder() {
         return RestClient.builder();
     }
@@ -24,6 +27,9 @@ public class AppConfig {
         executor.setMaxPoolSize(4);
         executor.setQueueCapacity(50);
         executor.setThreadNamePrefix("index-");
+
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        executor.setAwaitTerminationSeconds(20);
         executor.initialize();
         return executor;
     }

@@ -13,37 +13,47 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
 import com.springlensai.server.security.GithubOAuth2UserService;
-import lombok.RequiredArgsConstructor;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Configuration
 @EnableWebSecurity
-@RequiredArgsConstructor 
+@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final GithubOAuth2UserService gitHubOAuth2UserService;
 
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http, AuthenticationSuccessHandler oauth2SuccessHandler, AuthenticationFailureHandler oauth2FailureHandler) throws Exception {
+    SecurityFilterChain securityFilterChain(
+        HttpSecurity http,
+        AuthenticationSuccessHandler oauth2SuccessHandler,
+        AuthenticationFailureHandler oauth2FailureHandler) throws Exception {
+
         http.cors(Customizer.withDefaults())
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
-            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/login-url", "/oauth2/**", "/login/oauth2/**", "/error")
+            .authorizeHttpRequests(auth -> auth.requestMatchers("/",  
+                                                                "/api/health", 
+                                                                "/api/auth/login-url", 
+                                                                "/actuator/health/**",
+                                                                "/oauth2/**", 
+                                                                "/login/oauth2/**", 
+                                                                "/error")
             .permitAll()
-            .requestMatchers(HttpMethod.OPTIONS, "/**")
-            .permitAll()
-            .requestMatchers("/api/**")
-            .authenticated()
-            .anyRequest()
-            .permitAll())
+            .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+            .requestMatchers("/api/**").authenticated()
+            .anyRequest().permitAll())
             .exceptionHandling(e -> e.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
             .oauth2Login(oauth -> oauth.userInfoEndpoint(userInfo -> userInfo.userService(gitHubOAuth2UserService))
             .successHandler(oauth2SuccessHandler)
             .failureHandler(oauth2FailureHandler))
-            .logout(logout -> logout.logoutUrl("/api/auth/logout")
+            .logout(logout -> logout
+            .logoutUrl("/api/auth/logout")
             .logoutSuccessHandler((request, response, authentication) -> response.setStatus(HttpStatus.NO_CONTENT.value()))
             .invalidateHttpSession(true)
             .clearAuthentication(true)
@@ -56,13 +66,15 @@ public class SecurityConfig {
     AuthenticationSuccessHandler oauth2SuccessHandler(@Value("${app.frontend-url}") String frontendUrl) {
         SimpleUrlAuthenticationSuccessHandler handler = new SimpleUrlAuthenticationSuccessHandler();
         handler.setDefaultTargetUrl(frontendUrl + "/auth/callback");
+        handler.setAlwaysUseDefaultTargetUrl(true);
         return handler;
     }
 
     @Bean
     AuthenticationFailureHandler oauth2FailureHandler(@Value("${app.frontend-url}") String frontendUrl) {
-        SimpleUrlAuthenticationFailureHandler handler = new SimpleUrlAuthenticationFailureHandler();
-        handler.setDefaultFailureUrl(frontendUrl + "/login?error=oauth_failed");
-        return handler;
+        return (request, response, exception) -> {
+            log.warn("GitHub OAuth2 login failed: {}", exception.getMessage());
+            response.sendRedirect(frontendUrl + "/login?error=oauth_failed");
+        };
     }
 }
