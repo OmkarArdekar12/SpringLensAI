@@ -69,24 +69,14 @@ export class ApiError extends Error {
   }
 }
 
-/**
- * Base URL of the API as seen by the BROWSER.
- *
- * It is intentionally empty: the browser always calls its own origin (/api/..., /oauth2/...)
- * and next.config.ts rewrites those paths to the Spring Boot server. Being same-origin means the
- * session cookie is a normal first-party cookie, so login works in every browser (Safari and
- * Chrome both block third-party cookies, which a direct Vercel -> Render call would be).
- */
 export function getApiBaseUrl() {
   return "";
 }
 
-/** Full-page navigation target that starts GitHub login (must be a plain <a href>, not <Link>). */
 export function getGithubLoginUrl() {
   return `${getApiBaseUrl()}/oauth2/authorization/github`;
 }
 
-/** Turn any failed response into a short, human message. */
 export async function parseError(res: Response): Promise<string> {
   try {
     const data = await res.json();
@@ -128,7 +118,6 @@ export const api = {
   health: () => apiFetch<{ status: string }>("/api/health"),
   me: () => apiFetch<User>("/api/auth/me"),
   logout: () => apiFetch<void>("/api/auth/logout", { method: "POST" }),
-  /** Permanently deletes the account and all data. `confirmation` = the GitHub username. */
   deleteAccount: (confirmation: string) =>
     apiFetch<void>("/api/account/delete", {
       method: "POST",

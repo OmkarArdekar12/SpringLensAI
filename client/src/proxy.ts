@@ -3,16 +3,10 @@ import type { NextRequest } from "next/server";
 
 const AUTH_COOKIE = "springlens_auth";
 
-/**
- * Runs before a page renders (Next.js 16 "proxy", formerly "middleware").
- * Uses the non-sensitive hint cookie to avoid flashing protected pages at signed-out visitors.
- * Real authorization always happens on the API.
- */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isAuthed = request.cookies.get(AUTH_COOKIE)?.value === "1";
 
-  // The OAuth return page has no hint cookie yet
   if (pathname.startsWith("/auth/callback")) {
     return NextResponse.next();
   }
