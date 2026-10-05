@@ -1,0 +1,36 @@
+# Render Blueprint: New + > Blueprint > pick this repo.
+# Secrets marked "sync: false" are asked for in the dashboard the first time.
+services:
+  - type: web
+    name: springlensai-server
+    runtime: docker
+    rootDir: server
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free            # change to "starter" to avoid sleeping after 15 min of inactivity
+    region: singapore     # pick the region closest to your Neon database
+    healthCheckPath: /actuator/health/liveness
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        sync: false       # jdbc:postgresql://<neon-host>/<db>?sslmode=require
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
+      - key: TOKEN_ENCRYPTOR_PASSWORD
+        sync: false
+      - key: TOKEN_ENCRYPTOR_SALT
+        sync: false       # HEX string: openssl rand -hex 16
+      - key: FRONTEND_URL
+        sync: false       # your Vercel URL, e.g. https://springlensai.vercel.app (no trailing slash)
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false       # same as FRONTEND_URL
+      - key: COOKIE_SECURE
+        value: "true"

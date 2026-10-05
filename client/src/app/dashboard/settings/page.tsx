@@ -1,0 +1,18 @@
+"use client";
+
+import { SettingsDashboard } from "@/components/dashboard/settings-dashboard";
+import { AppShell } from "@/components/layout/app-shell";
+import { RequireAuth } from "@/components/providers/require-auth";
+
+export default function SettingsPage() {
+  return (
+    <RequireAuth>
+      <AppShell
+        title="Settings"
+        description="Profile, appearance, and account preferences"
+      >
+        <SettingsDashboard />
+      </AppShell>
+    </RequireAuth>
+  );
+}
