@@ -7,11 +7,6 @@ import org.springframework.stereotype.Component;
 import com.springlensai.server.entity.ChatMessage;
 import com.springlensai.server.entity.MessageRole;
 
-/**
- * Builds the two prompts sent to Gemini:
- * - System: rules for how the assistant behaves.
- * - User: recent conversation + retrieved code context + the actual question.
- */
 @Component
 public class ChatPromptBuilder {
 
@@ -40,14 +35,14 @@ public class ChatPromptBuilder {
     }
 
     private String formatHistory(List<ChatMessage> history) {
-        if (history == null || history.isEmpty()) {
+        if(history == null || history.isEmpty()) {
             return "(none)";
         }
         StringBuilder out = new StringBuilder();
-        for (ChatMessage message : history) {
+        for(ChatMessage message : history) {
             String who = message.getRole() == MessageRole.USER ? "User" : "Assistant";
             String text = message.getContent();
-            if (text.length() > RagSettings.HISTORY_MESSAGE_MAX_CHARS) {
+            if(text.length() > RagSettings.HISTORY_MESSAGE_MAX_CHARS) {
                 text = text.substring(0, RagSettings.HISTORY_MESSAGE_MAX_CHARS) + "...";
             }
             out.append(who).append(": ").append(text).append("\n");

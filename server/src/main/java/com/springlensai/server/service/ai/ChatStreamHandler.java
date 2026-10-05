@@ -22,17 +22,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.Disposable;
 
-/**
- * Generation step of RAG: calls Gemini through Spring AI and streams tokens to the browser as
- * Server-Sent Events. Event names: user_message, token, assistant_message, done, error.
- */
 @Component
 @RequiredArgsConstructor
 @Slf4j
 public class ChatStreamHandler {
 
-    private static final String EMPTY_REPLY =
-            "I could not generate an answer for that. Please try rephrasing your question.";
+    private static final String EMPTY_REPLY = "I could not generate an answer for that. Please try rephrasing your question.";
 
     private final ChatModel chatModel;
     private final ChatMessageRepository chatMessageRepository;
@@ -50,11 +45,10 @@ public class ChatStreamHandler {
         AtomicBoolean finished = new AtomicBoolean(false);
         AtomicReference<Disposable> subscription = new AtomicReference<>();
 
-        // Stop paying for tokens nobody reads when the browser leaves or the stream times out.
-        Runnable cancel = () -> {
+        Runnable cancel =() -> {
             finished.set(true);
             Disposable d = subscription.get();
-            if (d != null) {
+            if(d != null) {
                 d.dispose();
             }
         };
@@ -66,21 +60,21 @@ public class ChatStreamHandler {
             emitter.send(SseEmitter.event().name("user_message").data(savedUserMessage));
 
             Disposable disposable = ChatClient.builder(chatModel)
-                    .build()
-                    .prompt()
-                    .system(systemPrompt)
-                    .user(userPrompt)
-                    .stream()
-                    .content()
-                    .subscribe(
-                            token -> sendToken(emitter, fullReply, finished, token),
-                            err -> sendError(emitter, finished, err),
-                            () -> completeStream(emitter, sessionId, fullReply, citations, finished));
+                                              .build()
+                                              .prompt()
+                                              .system(systemPrompt)
+                                              .user(userPrompt)
+                                              .stream()
+                                              .content()
+                                              .subscribe(
+                                                        token -> sendToken(emitter, fullReply, finished, token),
+                                                        err -> sendError(emitter, finished, err),
+                                                        () -> completeStream(emitter, sessionId, fullReply, citations, finished));
             subscription.set(disposable);
-            if (finished.get()) {
+            if(finished.get()) {
                 disposable.dispose();
             }
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             sendError(emitter, finished, ex);
         }
 
@@ -88,14 +82,13 @@ public class ChatStreamHandler {
     }
 
     private void sendToken(SseEmitter emitter, StringBuilder fullReply, AtomicBoolean finished, String token) {
-        if (finished.get() || token == null) {
+        if(finished.get() || token == null) {
             return;
         }
         fullReply.append(token);
         try {
             emitter.send(SseEmitter.event().name("token").data(token, MediaType.APPLICATION_JSON));
-        } catch (Exception ex) {
-            // Client went away: stop generating.
+        } catch(Exception ex) {
             finished.set(true);
             log.debug("Stopping stream, client disconnected: {}", ex.getMessage());
             throw new IllegalStateException(ex);
@@ -103,53 +96,54 @@ public class ChatStreamHandler {
     }
 
     private void completeStream(
-            SseEmitter emitter,
-            UUID sessionId,
-            StringBuilder fullReply,
-            List<CitationDto> citations,
-            AtomicBoolean finished) {
-        if (!finished.compareAndSet(false, true)) {
+        SseEmitter emitter,
+        UUID sessionId,
+        StringBuilder fullReply,
+        List<CitationDto> citations,
+        AtomicBoolean finished) {
+
+        if(!finished.compareAndSet(false, true)) {
             return;
         }
         try {
             String reply = fullReply.toString().isBlank() ? EMPTY_REPLY : fullReply.toString();
             ChatMessage assistant = chatMessageRepository.save(ChatMessage.builder()
-                    .sessionId(sessionId)
-                    .role(MessageRole.ASSISTANT)
-                    .content(reply)
-                    .citations(citationMapper.toJson(citations))
-                    .build());
+                                                         .sessionId(sessionId)
+                                                         .role(MessageRole.ASSISTANT)
+                                                         .content(reply)
+                                                         .citations(citationMapper.toJson(citations))
+                                                         .build());
 
             emitter.send(SseEmitter.event().name("assistant_message").data(toMessageResponse(assistant)));
             emitter.send(SseEmitter.event().name("done").data("[DONE]"));
             emitter.complete();
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             log.warn("Could not finish stream: {}", ex.getMessage());
             emitter.completeWithError(ex);
         }
     }
 
     private void sendError(SseEmitter emitter, AtomicBoolean finished, Throwable error) {
-        if (!finished.compareAndSet(false, true)) {
+        if(!finished.compareAndSet(false, true)) {
             return;
         }
         log.error("Chat stream error", error);
         try {
             emitter.send(SseEmitter.event()
-                    .name("error")
-                    .data(Map.of("message", AiErrors.userMessage(error)), MediaType.APPLICATION_JSON));
+                   .name("error")
+                   .data(Map.of("message", AiErrors.userMessage(error)), MediaType.APPLICATION_JSON));
             emitter.complete();
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             emitter.completeWithError(ex);
         }
     }
 
     private ChatMessageResponse toMessageResponse(ChatMessage message) {
         return new ChatMessageResponse(
-                message.getId(),
-                message.getRole(),
-                message.getContent(),
-                citationMapper.fromJson(message.getCitations()),
-                message.getCreatedAt());
+                                        message.getId(),
+                                        message.getRole(),
+                                        message.getContent(),
+                                        citationMapper.fromJson(message.getCitations()),
+                                        message.getCreatedAt());
     }
 }

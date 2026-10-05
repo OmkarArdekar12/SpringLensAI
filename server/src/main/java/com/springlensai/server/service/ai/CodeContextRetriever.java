@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
-/** Retrieval step of RAG: embeds the question and fetches the most similar chunks of ONE repository. */
 @Service
 @RequiredArgsConstructor
 public class CodeContextRetriever {
@@ -23,14 +22,14 @@ public class CodeContextRetriever {
 
     public RetrievedContext retrieve(UUID repositoryId, String question) {
         var filter = new FilterExpressionBuilder()
-                .eq(RagSettings.METADATA_REPO_ID, repositoryId.toString())
-                .build();
+                    .eq(RagSettings.METADATA_REPO_ID, repositoryId.toString())
+                    .build();
 
         var search = SearchRequest.builder()
-                .query(question)
-                .topK(RagSettings.TOP_K_CHUNKS)
-                .filterExpression(filter)
-                .build();
+                                  .query(question)
+                                  .topK(RagSettings.TOP_K_CHUNKS)
+                                  .filterExpression(filter)
+                                  .build();
 
         var documents = vectorStore.similaritySearch(search);
 
