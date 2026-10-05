@@ -66,7 +66,7 @@ export function ChatComposer({
           )}
         </div>
         <p className="px-1 text-xs text-muted-foreground">
-          Press <Kbd>Enter</Kbd> to send &mid; <Kbd>Shift</Kbd> +{" "}
+          Press <Kbd>Enter</Kbd> to send &middot; <Kbd>Shift</Kbd> +{" "}
           <Kbd>Enter</Kbd> for a new line
         </p>
       </div>
