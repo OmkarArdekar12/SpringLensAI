@@ -38,7 +38,9 @@ function StatCard({
         <div className="flex items-start justify-between gap-3">
           <div>
             <CardDescription>{label}</CardDescription>
-            <CardTitle className="mt-1 text-2xl font-semibold">{value}</CardTitle>
+            <CardTitle className="mt-1 text-2xl font-semibold">
+              {value}
+            </CardTitle>
           </div>
           <div className="rounded-lg bg-muted p-2 text-muted-foreground">
             <Icon className="size-4" />
@@ -58,11 +60,15 @@ export function OverviewDashboard() {
   const reposQuery = useRepos();
   const repos = reposQuery.data ?? [];
 
-  const readyCount = repos.filter((repo) => repo.indexStatus === "READY").length;
-  const indexingCount = repos.filter(
-    (repo) => repo.indexStatus === "INDEXING"
+  const readyCount = repos.filter(
+    (repo) => repo.indexStatus === "READY",
   ).length;
-  const failedCount = repos.filter((repo) => repo.indexStatus === "FAILED").length;
+  const indexingCount = repos.filter(
+    (repo) => repo.indexStatus === "INDEXING",
+  ).length;
+  const failedCount = repos.filter(
+    (repo) => repo.indexStatus === "FAILED",
+  ).length;
   const totalChunks = repos.reduce((sum, repo) => sum + repo.chunkCount, 0);
   const recentRepos = [...repos]
     .sort((a, b) => {
@@ -102,7 +108,11 @@ export function OverviewDashboard() {
             <StatCard
               label="Needs attention"
               value={failedCount}
-              hint={failedCount > 0 ? "Review failed indexing jobs" : "All repos healthy"}
+              hint={
+                failedCount > 0
+                  ? "Review failed indexing jobs"
+                  : "All repos healthy"
+              }
               icon={failedCount > 0 ? AlertCircle : LoaderCircle}
             />
           </>
@@ -113,7 +123,9 @@ export function OverviewDashboard() {
         <section className="space-y-4">
           <div className="flex items-center justify-between gap-3">
             <div>
-              <h2 className="font-heading text-lg font-semibold">Recent repositories</h2>
+              <h2 className="font-heading text-lg font-semibold">
+                Recent repositories
+              </h2>
               <p className="text-sm text-muted-foreground">
                 Jump back into a repo you have indexed recently.
               </p>
@@ -161,7 +173,9 @@ export function OverviewDashboard() {
 
         <section className="space-y-4">
           <div>
-            <h2 className="font-heading text-lg font-semibold">Workspace status</h2>
+            <h2 className="font-heading text-lg font-semibold">
+              Workspace status
+            </h2>
             <p className="text-sm text-muted-foreground">
               A quick snapshot of indexing across your connected repos.
             </p>
@@ -180,18 +194,29 @@ export function OverviewDashboard() {
                     <Badge variant="secondary">{readyCount}</Badge>
                   </div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-muted-foreground">Indexing</span>
+                    <span className="text-sm text-muted-foreground">
+                      Indexing
+                    </span>
                     <Badge variant="secondary">{indexingCount}</Badge>
                   </div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-muted-foreground">Pending</span>
+                    <span className="text-sm text-muted-foreground">
+                      Pending
+                    </span>
                     <Badge variant="secondary">
-                      {repos.filter((repo) => repo.indexStatus === "PENDING").length}
+                      {
+                        repos.filter((repo) => repo.indexStatus === "PENDING")
+                          .length
+                      }
                     </Badge>
                   </div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm text-muted-foreground">Failed</span>
-                    <Badge variant={failedCount > 0 ? "destructive" : "secondary"}>
+                    <span className="text-sm text-muted-foreground">
+                      Failed
+                    </span>
+                    <Badge
+                      variant={failedCount > 0 ? "destructive" : "secondary"}
+                    >
                       {failedCount}
                     </Badge>
                   </div>

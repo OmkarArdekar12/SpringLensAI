@@ -24,7 +24,7 @@ export function ChatView({ repoId }: { repoId: string }) {
   const isIndexing = repoQuery.data?.indexStatus === "INDEXING";
   const statusQuery = useIndexStatus(
     repoId,
-    isIndexing || repoQuery.data?.indexStatus === "PENDING"
+    isIndexing || repoQuery.data?.indexStatus === "PENDING",
   );
 
   const indexStatus =
@@ -34,15 +34,17 @@ export function ChatView({ repoId }: { repoId: string }) {
   const sessionsQuery = useChatSessions(repoId, ready);
   const createSession = useCreateChatSession(repoId);
   const [selectedSessionId, setSelectedSessionId] = useState<string | null>(
-    null
+    null,
   );
   const autoCreateRef = useRef(false);
 
-  const sessionId =
-    selectedSessionId ?? sessionsQuery.data?.[0]?.id ?? null;
+  const sessionId = selectedSessionId ?? sessionsQuery.data?.[0]?.id ?? null;
 
   const messagesQuery = useChatMessages(sessionId);
-  const { send, stop, streaming, streamText } = useStreamChat(sessionId, repoId);
+  const { send, stop, streaming, streamText } = useStreamChat(
+    sessionId,
+    repoId,
+  );
 
   useEffect(() => {
     if (!ready || sessionsQuery.isLoading) return;

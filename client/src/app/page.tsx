@@ -208,9 +208,12 @@ export default function HomePage() {
       <footer className="border-t">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-muted-foreground sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}
+            &copy; {new Date().getFullYear()} {siteConfig.name}
           </p>
-          <p>Next.js · Spring Boot · Gemini · pgvector</p>
+          <p>
+            Next.js &mid; Spring Boot &mid; Google Gemini &mid; PostgreSQL &mid;
+            pgvector
+          </p>
         </div>
       </footer>
     </div>

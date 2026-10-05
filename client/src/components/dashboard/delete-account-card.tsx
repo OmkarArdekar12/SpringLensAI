@@ -36,7 +36,8 @@ export function DeleteAccountCard() {
   const [typed, setTyped] = useState("");
 
   const username = user?.githubUsername ?? "";
-  const matches = username !== "" && typed.trim().toLowerCase() === username.toLowerCase();
+  const matches =
+    username !== "" && typed.trim().toLowerCase() === username.toLowerCase();
 
   function handleOpenChange(next: boolean) {
     // Don't allow closing the dialog while the deletion request is running
@@ -51,15 +52,21 @@ export function DeleteAccountCard() {
         <CardHeader>
           <CardTitle className="text-destructive">Danger zone</CardTitle>
           <CardDescription>
-            Permanently delete your SpringLens AI account. This cannot be undone.
+            Permanently delete your SpringLens AI account. This cannot be
+            undone.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>Your profile and encrypted GitHub token are erased.</li>
-            <li>All indexed repositories and their search vectors are erased.</li>
+            <li>
+              All indexed repositories and their search vectors are erased.
+            </li>
             <li>All chat sessions and messages are erased.</li>
-            <li>You are signed out everywhere, and SpringLens AI is removed from your GitHub authorized apps.</li>
+            <li>
+              You are signed out everywhere, and SpringLens AI is removed from
+              your GitHub authorized apps.
+            </li>
             <li>Your repositories on GitHub are never touched.</li>
           </ul>
           <Button variant="destructive" onClick={() => setOpen(true)}>
@@ -77,8 +84,8 @@ export function DeleteAccountCard() {
               Delete account permanently?
             </AlertDialogTitle>
             <AlertDialogDescription>
-              All your repositories, vectors and chats will be deleted for good. There is no way to
-              recover them.
+              All your repositories, vectors and chats will be deleted for good.
+              There is no way to recover them.
             </AlertDialogDescription>
           </AlertDialogHeader>
 
@@ -99,7 +106,9 @@ export function DeleteAccountCard() {
           </div>
 
           <AlertDialogFooter>
-            <AlertDialogCancel disabled={deleteAccount.isPending}>Cancel</AlertDialogCancel>
+            <AlertDialogCancel disabled={deleteAccount.isPending}>
+              Cancel
+            </AlertDialogCancel>
             <Button
               variant="destructive"
               disabled={!matches || deleteAccount.isPending}

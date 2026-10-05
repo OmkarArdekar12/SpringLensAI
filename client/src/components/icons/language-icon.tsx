@@ -238,7 +238,7 @@ const LANGUAGE_MAP: Record<string, LanguageConfig> = {
     bg: "bg-[#363636]",
     iconClass: "text-white",
   },
-  "WebAssembly": {
+  WebAssembly: {
     Icon: SiWebassembly,
     bg: "bg-[#654FF0]",
     iconClass: "text-white",
@@ -334,7 +334,7 @@ export function LanguageIcon({
         "flex shrink-0 items-center justify-center rounded-lg shadow-sm",
         boxSize,
         bg,
-        className
+        className,
       )}
     >
       {isLucideFallback ? (

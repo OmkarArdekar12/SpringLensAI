@@ -60,11 +60,13 @@ export function SettingsDashboard() {
           <div className="grid gap-3 text-sm">
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted-foreground">Display name</span>
-              <span className="font-medium">{user?.displayName ?? "—"}</span>
+              <span className="font-medium">{user?.displayName ?? "-"}</span>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted-foreground">GitHub username</span>
-              <span className="font-medium">@{user?.githubUsername ?? "—"}</span>
+              <span className="font-medium">
+                @{user?.githubUsername ?? "-"}
+              </span>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted-foreground">Authentication</span>

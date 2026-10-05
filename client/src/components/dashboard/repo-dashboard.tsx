@@ -25,7 +25,7 @@ export function RepoDashboard() {
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState<FilterStatus>("ALL");
   const [visibility, setVisibility] = useState<"all" | "public" | "private">(
-    "all"
+    "all",
   );
 
   const filtered = useMemo(() => {

@@ -8,10 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  useChatSessions,
-  useCreateChatSession,
-} from "@/hooks/use-chat";
+import { useChatSessions, useCreateChatSession } from "@/hooks/use-chat";
 import { useStartIndexing } from "@/hooks/use-repos";
 import type { Repository } from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -95,7 +92,7 @@ export function ChatSidebar({
               onClick={() => onSelectSession(session.id)}
               className={cn(
                 "w-full rounded-xl px-3 py-2.5 text-left transition-colors hover:bg-muted",
-                sessionId === session.id && "bg-muted"
+                sessionId === session.id && "bg-muted",
               )}
             >
               <p className="truncate text-sm font-medium">{session.title}</p>
@@ -107,11 +104,13 @@ export function ChatSidebar({
             </button>
           ))}
 
-          {ready && sessionsQuery.isSuccess && sessionsQuery.data.length === 0 && (
-            <p className="px-2 text-xs text-muted-foreground">
-              No chats yet. Start one to begin.
-            </p>
-          )}
+          {ready &&
+            sessionsQuery.isSuccess &&
+            sessionsQuery.data.length === 0 && (
+              <p className="px-2 text-xs text-muted-foreground">
+                No chats yet. Start one to begin.
+              </p>
+            )}
         </div>
       </ScrollArea>
     </aside>

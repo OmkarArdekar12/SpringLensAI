@@ -1,4 +1,7 @@
-import { LanguageIcon, getLanguageLabel } from "@/components/icons/language-icon";
+import {
+  LanguageIcon,
+  getLanguageLabel,
+} from "@/components/icons/language-icon";
 import { cn } from "@/lib/utils";
 
 export function LanguageBadge({

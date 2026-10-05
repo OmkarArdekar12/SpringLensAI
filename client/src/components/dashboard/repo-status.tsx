@@ -66,7 +66,9 @@ export function RepoMeta({ repo }: { repo: Repository }) {
         </span>
       )}
       <span>{repo.defaultBranch}</span>
-      {repo.chunkCount > 0 && <span>{repo.chunkCount.toLocaleString()} chunks</span>}
+      {repo.chunkCount > 0 && (
+        <span>{repo.chunkCount.toLocaleString()} chunks</span>
+      )}
     </div>
   );
 }

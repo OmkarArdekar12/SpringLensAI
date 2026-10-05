@@ -49,7 +49,7 @@ export function RepoCard({ repo }: { repo: Repository }) {
         "group flex flex-col overflow-hidden rounded-2xl border border-dashed bg-card/80 shadow-md shadow-foreground/5 transition-all",
         isFailed
           ? "border-destructive/30 bg-destructive/2 hover:border-destructive/40"
-          : "border-border/80 hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-lg hover:shadow-foreground/10"
+          : "border-border/80 hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-lg hover:shadow-foreground/10",
       )}
     >
       <div className="border-b border-dashed border-border/70 p-4">
@@ -57,7 +57,9 @@ export function RepoCard({ repo }: { repo: Repository }) {
           <div className="flex min-w-0 items-start gap-3">
             <LanguageBadge language={repo.language} showLabel={false} />
             <div className="min-w-0">
-              <p className="truncate text-xs text-muted-foreground">{repo.owner}</p>
+              <p className="truncate text-xs text-muted-foreground">
+                {repo.owner}
+              </p>
               <h3 className="truncate font-medium">{repo.name}</h3>
             </div>
           </div>
@@ -101,7 +103,7 @@ export function RepoCard({ repo }: { repo: Repository }) {
                 "rounded-full border border-dashed px-2 py-0.5 text-xs",
                 isFailed
                   ? "border-destructive/20 text-destructive/80"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground",
               )}
             >
               {repo.chunkCount.toLocaleString()} chunks
@@ -151,7 +153,10 @@ export function RepoCard({ repo }: { repo: Repository }) {
           <Button
             size="sm"
             variant={isFailed ? "outline" : "default"}
-            className={cn(isFailed && "border-destructive/30 text-destructive hover:bg-destructive/10")}
+            className={cn(
+              isFailed &&
+                "border-destructive/30 text-destructive hover:bg-destructive/10",
+            )}
             disabled={isIndexing}
             onClick={handlePrimary}
           >

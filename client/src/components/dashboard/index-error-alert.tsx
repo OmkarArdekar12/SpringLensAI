@@ -14,7 +14,11 @@ import { cn } from "@/lib/utils";
 const SUMMARY_LIMIT = 100;
 
 function getErrorSummary(message: string) {
-  const line = message.split("\n").find((part) => part.trim())?.trim() ?? message;
+  const line =
+    message
+      .split("\n")
+      .find((part) => part.trim())
+      ?.trim() ?? message;
   if (line.length <= SUMMARY_LIMIT) return line;
   return `${line.slice(0, SUMMARY_LIMIT - 1)}…`;
 }
@@ -42,14 +46,14 @@ export function IndexErrorAlert({ message }: { message: string }) {
             <CollapsibleTrigger
               className={cn(
                 "inline-flex items-center gap-1 font-medium text-destructive hover:underline",
-                !open ? "mt-1.5" : "mt-0"
+                !open ? "mt-1.5" : "mt-0",
               )}
             >
               {open ? "Hide details" : "Show details"}
               <ChevronDown
                 className={cn(
                   "size-3 transition-transform",
-                  open && "rotate-180"
+                  open && "rotate-180",
                 )}
               />
             </CollapsibleTrigger>

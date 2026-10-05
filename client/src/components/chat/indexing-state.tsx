@@ -38,7 +38,8 @@ export function IndexingState({
           </EmptyMedia>
           <EmptyTitle>Indexing failed</EmptyTitle>
           <EmptyDescription>
-            {errorMessage || "Something went wrong while indexing this repository."}
+            {errorMessage ||
+              "Something went wrong while indexing this repository."}
           </EmptyDescription>
         </EmptyHeader>
         <Button
@@ -68,7 +69,7 @@ export function IndexingState({
       <div className="w-full max-w-sm space-y-2">
         <Progress value={Math.max(progress, filesTotal ? progress : 12)} />
         <p className="text-center text-xs text-muted-foreground">
-          You can leave this page open — chat unlocks when indexing finishes.
+          You can leave this page open - chat unlocks when indexing finishes.
         </p>
       </div>
     </Empty>

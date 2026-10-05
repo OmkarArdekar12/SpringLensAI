@@ -53,8 +53,8 @@ export function ChatMessages({
           <div className="rounded-2xl border border-dashed bg-muted/30 px-6 py-10 text-center">
             <p className="font-medium">Ask anything about this codebase</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Try “Where is authentication handled?” or “Explain the repository
-              indexing flow.”
+              Try "Where is authentication handled?" or "Explain the repository
+              indexing flow."
             </p>
           </div>
         )}
@@ -70,7 +70,7 @@ export function ChatMessages({
                       className={cn(
                         isUser
                           ? "bg-primary text-primary-foreground"
-                          : "bg-muted"
+                          : "bg-muted",
                       )}
                     >
                       {isUser ? (
@@ -87,7 +87,9 @@ export function ChatMessages({
                     align={isUser ? "end" : "start"}
                     className={cn(!isUser && "max-w-full")}
                   >
-                    <BubbleContent className={cn(!isUser && "w-full max-w-full px-4 py-3")}>
+                    <BubbleContent
+                      className={cn(!isUser && "w-full max-w-full px-4 py-3")}
+                    >
                       {isUser ? (
                         <span className="whitespace-pre-wrap">
                           {message.content}
@@ -99,7 +101,10 @@ export function ChatMessages({
                   </Bubble>
                   {!isUser && message.citations?.length > 0 && (
                     <MessageFooter>
-                      <CitationChips repo={repo} citations={message.citations} />
+                      <CitationChips
+                        repo={repo}
+                        citations={message.citations}
+                      />
                     </MessageFooter>
                   )}
                 </MessageContent>
