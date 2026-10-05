@@ -2,15 +2,15 @@
 
 import { AlertCircle, Loader2, RotateCcw } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn-ui/button";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/empty";
-import { Progress } from "@/components/ui/progress";
+} from "@/components/shadcn-ui/empty";
+import { Progress } from "@/components/shadcn-ui/progress";
 import { getRepoProgress, useStartIndexing } from "@/hooks/use-repos";
 import type { IndexStatusResponse, Repository } from "@/lib/api";
 

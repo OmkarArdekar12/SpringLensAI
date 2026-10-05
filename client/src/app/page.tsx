@@ -14,9 +14,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { buttonVariants } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
+} from "@/components/shadcn-ui/accordion";
+import { buttonVariants } from "@/components/shadcn-ui/button";
+import { ModeToggle } from "@/components/shadcn-ui/mode-toggle";
 import { getGithubLoginUrl } from "@/lib/api";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";

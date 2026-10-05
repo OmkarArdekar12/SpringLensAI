@@ -7,17 +7,21 @@ import { AlertCircle } from "lucide-react";
 
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { BrandMark } from "@/components/layout/brand-mark";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { buttonVariants } from "@/components/ui/button";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/shadcn-ui/alert";
+import { buttonVariants } from "@/components/shadcn-ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Spinner } from "@/components/ui/spinner";
+} from "@/components/shadcn-ui/card";
+import { ModeToggle } from "@/components/shadcn-ui/mode-toggle";
+import { Spinner } from "@/components/shadcn-ui/spinner";
 import { useCurrentUser } from "@/hooks/use-auth";
 import { getGithubLoginUrl } from "@/lib/api";
 import { cn } from "@/lib/utils";

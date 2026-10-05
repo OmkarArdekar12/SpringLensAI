@@ -5,15 +5,15 @@ import { FolderGit2 } from "lucide-react";
 
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { RepoCard } from "@/components/dashboard/repo-card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn-ui/button";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/empty";
-import { Skeleton } from "@/components/ui/skeleton";
+} from "@/components/shadcn-ui/empty";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import { useRefreshRepos, useRepos } from "@/hooks/use-repos";
 import type { IndexStatus } from "@/lib/api";
 

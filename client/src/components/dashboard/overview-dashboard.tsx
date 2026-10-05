@@ -10,15 +10,15 @@ import {
 } from "lucide-react";
 
 import { RepoCard } from "@/components/dashboard/repo-card";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn-ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+} from "@/components/shadcn-ui/card";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import { useRepos } from "@/hooks/use-repos";
 
 function StatCard({

@@ -12,7 +12,6 @@ const QueryProvider = ({ children }: { children: React.ReactNode }) => {
         defaultOptions: {
           queries: {
             refetchOnWindowFocus: false,
-            // Never retry client errors (401/403/404); retry network/server blips twice
             retry: (failureCount, error) => {
               if (error instanceof ApiError && error.status < 500) return false;
               return failureCount < 2;

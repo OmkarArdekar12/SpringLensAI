@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { Spinner } from "@/components/ui/spinner";
+import { Spinner } from "@/components/shadcn-ui/spinner";
 import { useCurrentUser } from "@/hooks/use-auth";
 
 export default function AuthCallbackPage() {

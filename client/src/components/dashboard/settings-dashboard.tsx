@@ -6,19 +6,23 @@ import { useTheme } from "next-themes";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { DeleteAccountCard } from "@/components/dashboard/delete-account-card";
 
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/shadcn-ui/mode-toggle";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/shadcn-ui/avatar";
+import { Button } from "@/components/shadcn-ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Switch } from "@/components/ui/switch";
+} from "@/components/shadcn-ui/card";
+import { Label } from "@/components/shadcn-ui/label";
+import { Separator } from "@/components/shadcn-ui/separator";
+import { Switch } from "@/components/shadcn-ui/switch";
 import { useCurrentUser, useLogout } from "@/hooks/use-auth";
 
 export function SettingsDashboard() {

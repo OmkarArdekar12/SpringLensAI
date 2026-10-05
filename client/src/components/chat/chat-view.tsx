@@ -9,8 +9,8 @@ import { ChatMessages } from "@/components/chat/chat-messages";
 import { ChatSidebar } from "@/components/chat/chat-sidebar";
 import { IndexingState } from "@/components/chat/indexing-state";
 import { AppShell } from "@/components/layout/app-shell";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/shadcn-ui/button";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import {
   useChatMessages,
   useChatSessions,

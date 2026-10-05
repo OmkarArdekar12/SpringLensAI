@@ -6,7 +6,7 @@ import { useCallback, useRef, useState } from "react";
 import { api, type ChatMessage } from "@/lib/api";
 import { queryKeys } from "@/lib/query-keys";
 import { streamChatMessage } from "@/lib/stream-chat";
-import { toast } from "@/components/ui/toast";
+import { toast } from "@/components/shadcn-ui/toast";
 
 export function useChatSessions(repositoryId: string, enabled = true) {
   return useQuery({

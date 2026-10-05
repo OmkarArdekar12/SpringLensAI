@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { SendHorizontal, Square } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Kbd } from "@/components/ui/kbd";
-import { Spinner } from "@/components/ui/spinner";
+import { Button } from "@/components/shadcn-ui/button";
+import { Textarea } from "@/components/shadcn-ui/textarea";
+import { Kbd } from "@/components/shadcn-ui/kbd";
+import { Spinner } from "@/components/shadcn-ui/spinner";
 
 export function ChatComposer({
   disabled,

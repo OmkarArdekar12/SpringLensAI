@@ -5,17 +5,17 @@ import { useEffect, useRef } from "react";
 
 import { ChatMarkdown } from "@/components/chat/chat-markdown";
 import { CitationChips } from "@/components/chat/citation-chips";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Bubble, BubbleContent } from "@/components/ui/bubble";
+import { Avatar, AvatarFallback } from "@/components/shadcn-ui/avatar";
+import { Bubble, BubbleContent } from "@/components/shadcn-ui/bubble";
 import {
   Message,
   MessageAvatar,
   MessageContent,
   MessageFooter,
   MessageGroup,
-} from "@/components/ui/message";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Skeleton } from "@/components/ui/skeleton";
+} from "@/components/shadcn-ui/message";
+import { ScrollArea } from "@/components/shadcn-ui/scroll-area";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import type { ChatMessage, Repository } from "@/lib/api";
 import { cn } from "@/lib/utils";
 

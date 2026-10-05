@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Trash2, TriangleAlert } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn-ui/button";
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -12,17 +12,17 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+} from "@/components/shadcn-ui/alert-dialog";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Spinner } from "@/components/ui/spinner";
+} from "@/components/shadcn-ui/card";
+import { Input } from "@/components/shadcn-ui/input";
+import { Label } from "@/components/shadcn-ui/label";
+import { Spinner } from "@/components/shadcn-ui/spinner";
 import { useCurrentUser, useDeleteAccount } from "@/hooks/use-auth";
 
 /**

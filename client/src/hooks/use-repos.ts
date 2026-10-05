@@ -4,7 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { api, type Repository } from "@/lib/api";
 import { queryKeys } from "@/lib/query-keys";
-import { toast } from "@/components/ui/toast";
+import { toast } from "@/components/shadcn-ui/toast";
 
 const INDEXING_POLL_MS = 2000;
 
@@ -105,7 +105,9 @@ export function useRefreshRepos() {
         error: (error: unknown) => ({
           title: "Sync failed",
           description:
-            error instanceof Error ? error.message : "Could not sync repositories",
+            error instanceof Error
+              ? error.message
+              : "Could not sync repositories",
           type: "error",
         }),
       }),
@@ -119,5 +121,8 @@ export function getRepoProgress(
   repo: Pick<Repository, "filesProcessed" | "filesTotal">,
 ) {
   if (!repo.filesTotal) return 0;
-  return Math.min(100, Math.round((repo.filesProcessed / repo.filesTotal) * 100));
+  return Math.min(
+    100,
+    Math.round((repo.filesProcessed / repo.filesTotal) * 100),
+  );
 }

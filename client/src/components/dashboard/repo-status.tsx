@@ -1,5 +1,5 @@
 import type { IndexStatus, Repository } from "@/lib/api";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn-ui/badge";
 import { cn } from "@/lib/utils";
 
 export function indexStatusLabel(status: IndexStatus) {

@@ -4,10 +4,10 @@ import { formatDistanceToNow } from "date-fns";
 import { Plus, RotateCcw } from "lucide-react";
 
 import { IndexStatusBadge } from "@/components/dashboard/repo-status";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/shadcn-ui/button";
+import { ScrollArea } from "@/components/shadcn-ui/scroll-area";
+import { Separator } from "@/components/shadcn-ui/separator";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import { useChatSessions, useCreateChatSession } from "@/hooks/use-chat";
 import { useStartIndexing } from "@/hooks/use-repos";
 import type { Repository } from "@/lib/api";

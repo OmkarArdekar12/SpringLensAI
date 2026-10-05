@@ -1,11 +1,7 @@
 import { ExternalLink } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn-ui/badge";
 
-/**
- * Static illustration of the product's core moment: a question, a grounded answer,
- * and file:line citations. Pure markup - no data fetching.
- */
 export function ChatPreview() {
   return (
     <figure
@@ -45,8 +41,8 @@ export function ChatPreview() {
         </div>
       </div>
       <figcaption className="sr-only">
-        SpringLens AI answers questions using only your code, and links every claim to the file
-        and line it came from.
+        SpringLens AI answers questions using only your code, and links every
+        claim to the file and line it came from.
       </figcaption>
     </figure>
   );

@@ -3,14 +3,19 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Spinner } from "@/components/ui/spinner";
+import { Button } from "@/components/shadcn-ui/button";
+import { Spinner } from "@/components/shadcn-ui/spinner";
 import { isUnauthorized, useCurrentUser } from "@/hooks/use-auth";
 
-/** Wraps pages that need a signed-in user. */
 export function RequireAuth({ children }: { children: React.ReactNode }) {
-  const { data: user, isLoading, isError, error, refetch, failureCount } =
-    useCurrentUser();
+  const {
+    data: user,
+    isLoading,
+    isError,
+    error,
+    refetch,
+    failureCount,
+  } = useCurrentUser();
   const router = useRouter();
   const signedOut = isError && isUnauthorized(error);
 

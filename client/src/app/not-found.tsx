@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/shadcn-ui/button";
 import { cn } from "@/lib/utils";
 
 export default function NotFound() {

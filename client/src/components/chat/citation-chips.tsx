@@ -2,7 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn-ui/badge";
 import type { Citation, Repository } from "@/lib/api";
 
 export function citationHref(repo: Repository, citation: Citation) {

@@ -3,12 +3,16 @@
 import { useState } from "react";
 import { AlertCircle, ChevronDown } from "lucide-react";
 
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/shadcn-ui/alert";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/components/shadcn-ui/collapsible";
 import { cn } from "@/lib/utils";
 
 const SUMMARY_LIMIT = 100;

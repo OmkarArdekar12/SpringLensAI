@@ -6,10 +6,14 @@ import { LogOut, Settings } from "lucide-react";
 
 import { SpringLensIcon } from "@/components/icons/springlens-icon";
 
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { ModeToggle } from "@/components/shadcn-ui/mode-toggle";
 import { useCurrentUser, useLogout } from "@/hooks/use-auth";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/shadcn-ui/avatar";
+import { Button } from "@/components/shadcn-ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,8 +22,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Separator } from "@/components/ui/separator";
+} from "@/components/shadcn-ui/dropdown-menu";
+import { Separator } from "@/components/shadcn-ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -34,11 +38,8 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar";
-import {
-  dashboardNavGroups,
-  isDashboardNavActive,
-} from "@/lib/dashboard-nav";
+} from "@/components/shadcn-ui/sidebar";
+import { dashboardNavGroups, isDashboardNavActive } from "@/lib/dashboard-nav";
 import { cn } from "@/lib/utils";
 
 export function AppShell({
@@ -94,7 +95,7 @@ export function AppShell({
                         isActive={isDashboardNavActive(
                           pathname,
                           item.href,
-                          item.exact
+                          item.exact,
                         )}
                         tooltip={item.title}
                         render={<Link href={item.href} />}
@@ -159,7 +160,9 @@ export function AppShell({
                     </DropdownMenuLabel>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={() => router.push("/dashboard/settings")}>
+                  <DropdownMenuItem
+                    onClick={() => router.push("/dashboard/settings")}
+                  >
                     <Settings />
                     Settings
                   </DropdownMenuItem>
@@ -219,7 +222,12 @@ export function GhostButtonLink({
   className?: string;
 }) {
   return (
-    <Button variant="ghost" size="sm" className={className} render={<Link href={href} />}>
+    <Button
+      variant="ghost"
+      size="sm"
+      className={className}
+      render={<Link href={href} />}
+    >
       {children}
     </Button>
   );

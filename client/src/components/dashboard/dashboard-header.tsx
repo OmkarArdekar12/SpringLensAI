@@ -2,11 +2,11 @@
 
 import { RefreshCw, Search } from "lucide-react";
 
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+import { ModeToggle } from "@/components/shadcn-ui/mode-toggle";
+import { Button } from "@/components/shadcn-ui/button";
+import { Input } from "@/components/shadcn-ui/input";
+import { Separator } from "@/components/shadcn-ui/separator";
+import { SidebarTrigger } from "@/components/shadcn-ui/sidebar";
 import { cn } from "@/lib/utils";
 import type { IndexStatus } from "@/lib/api";
 
@@ -56,7 +56,7 @@ function FilterPill({
         "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
         active
           ? "border-foreground/20 bg-foreground text-background shadow-sm"
-          : "border-dashed border-border bg-background text-muted-foreground hover:border-foreground/20 hover:text-foreground"
+          : "border-dashed border-border bg-background text-muted-foreground hover:border-foreground/20 hover:text-foreground",
       )}
     >
       {children}
