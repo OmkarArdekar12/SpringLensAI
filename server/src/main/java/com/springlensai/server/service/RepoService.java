@@ -20,7 +20,6 @@ import com.springlensai.server.service.github.GithubApiClient;
 
 import lombok.RequiredArgsConstructor;
 
-/** Lists the user's GitHub repositories (synced into our database) and exposes their index state. */
 @Service
 @RequiredArgsConstructor
 public class RepoService {
@@ -29,22 +28,21 @@ public class RepoService {
     private final UserService userService;
     private final GithubApiClient gitHubApiClient;
 
-    /** One sync at a time per user, so double-clicks / double requests cannot insert duplicates. */
     private final ConcurrentHashMap<UUID, Object> syncLocks = new ConcurrentHashMap<>();
 
     public List<RepositoryResponse> syncAndListRepos(UUID userId) {
         User user = userService.requiredById(userId);
         String token = userService.decryptAccessToken(user);
 
-        synchronized (syncLocks.computeIfAbsent(userId, id -> new Object())) {
+        synchronized(syncLocks.computeIfAbsent(userId, id -> new Object())) {
             List<Map<String, Object>> remoteRepos = gitHubApiClient.listUserRepos(token);
             List<Repository> saved = new ArrayList<>();
 
-            for (Map<String, Object> remote : remoteRepos) {
+            for(Map<String, Object> remote : remoteRepos) {
                 Long githubRepoId = toLong(remote.get("id"));
                 Repository repo = repositoryRepository
-                        .findByUserIdAndGithubRepoId(userId, githubRepoId)
-                        .orElseGet(Repository::new);
+                                    .findByUserIdAndGithubRepoId(userId, githubRepoId)
+                                    .orElseGet(Repository::new);
 
                 String fullName = String.valueOf(remote.get("full_name"));
                 String[] parts = fullName.split("/", 2);
@@ -56,13 +54,12 @@ public class RepoService {
                 repo.setFullName(fullName);
                 repo.setPrivate(Boolean.TRUE.equals(remote.get("private")));
                 repo.setDefaultBranch(remote.get("default_branch") != null
-                        ? String.valueOf(remote.get("default_branch"))
-                        : "main");
+                                        ? String.valueOf(remote.get("default_branch")) : "main");
                 repo.setLanguage(remote.get("language") != null ? String.valueOf(remote.get("language")) : null);
                 repo.setHtmlUrl(remote.get("html_url") != null ? String.valueOf(remote.get("html_url")) : null);
                 repo.setDescription(remote.get("description") != null ? String.valueOf(remote.get("description")) : null);
                 repo.setUpdatedAt(Instant.now());
-                if (repo.getOwner().isBlank() && remote.get("owner") instanceof Map<?, ?> ownerMap
+                if(repo.getOwner().isBlank() && remote.get("owner") instanceof Map<?, ?> ownerMap
                         && ownerMap.get("login") != null) {
                     repo.setOwner(String.valueOf(ownerMap.get("login")));
                 }
@@ -70,61 +67,59 @@ public class RepoService {
             }
 
             return saved.stream()
-                    .sorted((a, b) -> a.getFullName().compareToIgnoreCase(b.getFullName()))
-                    .map(this::toResponse)
-                    .toList();
+                        .sorted((a, b) -> a.getFullName().compareToIgnoreCase(b.getFullName()))
+                        .map(this::toResponse)
+                        .toList();
         }
     }
 
     @Transactional(readOnly = true)
     public List<RepositoryResponse> listStored(UUID userId) {
         return repositoryRepository.findByUserIdOrderByFullNameAsc(userId).stream()
-                .map(this::toResponse)
-                .toList();
+                                   .map(this::toResponse)
+                                   .toList();
     }
 
-    /** Loads a repository only if it belongs to this user (prevents reading other people's repos). */
     @Transactional(readOnly = true)
     public Repository requireOwned(UUID repoId, UUID userId) {
         return repositoryRepository.findByIdAndUserId(repoId, userId)
-                .orElseThrow(() -> new NotFoundException("Repository not found"));
+                                   .orElseThrow(() -> new NotFoundException("Repository not found"));
     }
 
     @Transactional(readOnly = true)
     public IndexStatusResponse status(UUID repoId, UUID userId) {
         Repository repo = requireOwned(repoId, userId);
         return new IndexStatusResponse(
-                repo.getId(),
-                repo.getIndexStatus(),
-                repo.getFilesTotal(),
-                repo.getFilesProcessed(),
-                repo.getChunkCount(),
-                repo.getIndexedAt(),
-                repo.getErrorMessage());
+                                        repo.getId(),
+                                        repo.getIndexStatus(),
+                                        repo.getFilesTotal(),
+                                        repo.getFilesProcessed(),
+                                        repo.getChunkCount(),
+                                        repo.getIndexedAt(),
+                                        repo.getErrorMessage());
     }
 
     public RepositoryResponse toResponse(Repository repo) {
-        return new RepositoryResponse(
-                repo.getId(),
-                repo.getGithubRepoId(),
-                repo.getOwner(),
-                repo.getName(),
-                repo.getFullName(),
-                repo.isPrivate(),
-                repo.getDefaultBranch(),
-                repo.getLanguage(),
-                repo.getHtmlUrl(),
-                repo.getDescription(),
-                repo.getIndexStatus(),
-                repo.getIndexedAt(),
-                repo.getChunkCount(),
-                repo.getFilesTotal(),
-                repo.getFilesProcessed(),
-                repo.getErrorMessage());
+        return new RepositoryResponse(repo.getId(),
+                                      repo.getGithubRepoId(),
+                                      repo.getOwner(),
+                                      repo.getName(),
+                                      repo.getFullName(),
+                                      repo.isPrivate(),
+                                      repo.getDefaultBranch(),
+                                      repo.getLanguage(),
+                                      repo.getHtmlUrl(),
+                                      repo.getDescription(),
+                                      repo.getIndexStatus(),
+                                      repo.getIndexedAt(),
+                                      repo.getChunkCount(),
+                                      repo.getFilesTotal(),
+                                      repo.getFilesProcessed(),
+                                      repo.getErrorMessage());
     }
 
     private static Long toLong(Object value) {
-        if (value instanceof Number number) {
+        if(value instanceof Number number) {
             return number.longValue();
         }
         return Long.parseLong(String.valueOf(value));
