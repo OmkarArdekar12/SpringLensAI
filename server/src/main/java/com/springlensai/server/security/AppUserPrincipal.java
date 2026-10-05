@@ -10,13 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-/**
- * The logged-in user stored in the HTTP session.
- *
- * Sessions are persisted in Postgres (Spring Session JDBC), so everything stored here must be
- * Serializable. That is why we keep only the user's id + GitHub attributes and NOT the JPA
- * User entity (which is not serializable). Fresh user data is loaded from the database by id.
- */
 public class AppUserPrincipal implements OAuth2User, Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import com.springlensai.server.exceptions.UnauthorizedException;
 
-/** Convenience accessor for the logged-in user inside controllers. */
 @Component
 public class CurrentUser {
 

@@ -12,10 +12,6 @@ import com.springlensai.server.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * Runs right after GitHub redirects back with a code: fetches the GitHub profile, saves/updates
- * our User row (with the encrypted access token) and returns our own principal.
- */
 @Service
 @RequiredArgsConstructor
 public class GithubOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
@@ -29,8 +25,7 @@ public class GithubOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         String accessToken = userRequest.getAccessToken().getTokenValue();
         String scopes = userRequest.getAccessToken().getScopes() != null
-                ? String.join(",", userRequest.getAccessToken().getScopes())
-                : "read:user,repo";
+                        ? String.join(",", userRequest.getAccessToken().getScopes()) : "read:user,repo";
 
         User user = userService.upsertFromGitHub(githubUser.getAttributes(), accessToken, scopes);
 
