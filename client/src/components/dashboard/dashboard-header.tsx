@@ -88,7 +88,7 @@ export function DashboardHeader({
               </h1>
               <p className="text-sm text-muted-foreground">
                 {totalCount != null
-                  ? `${totalCount} connected · ${readyCount ?? 0} ready`
+                  ? `${totalCount} connected - ${readyCount ?? 0} ready`
                   : "Sync and index a repo to start chatting"}
               </p>
             </div>
@@ -100,7 +100,7 @@ export function DashboardHeader({
               <Input
                 value={search}
                 onChange={(e) => onSearchChange(e.target.value)}
-                placeholder="Search repositories…"
+                placeholder="Search repositories..."
                 className="border-dashed bg-background pl-9 shadow-sm"
               />
             </div>

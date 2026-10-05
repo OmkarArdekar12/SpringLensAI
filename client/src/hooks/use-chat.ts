@@ -108,14 +108,11 @@ export function useStreamChat(sessionId: string | null, repositoryId: string) {
           });
         }
         setStreamText("");
-        // Server state is the truth: this drops the optimistic bubble and shows any
-        // answer the server managed to save before the connection broke.
         await queryClient.invalidateQueries({
           queryKey: queryKeys.chat.messages(sessionId),
         });
       } finally {
         setStreaming(false);
-        // The first question renames the session on the server
         void queryClient.invalidateQueries({
           queryKey: queryKeys.chat.sessions(repositoryId),
         });

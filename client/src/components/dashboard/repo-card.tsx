@@ -115,7 +115,7 @@ export function RepoCard({ repo }: { repo: Repository }) {
         {isIndexing && (
           <div className="space-y-2 rounded-xl border border-dashed bg-muted/30 p-3">
             <div className="flex items-center justify-between text-xs text-muted-foreground">
-              <span>Indexing…</span>
+              <span>Indexing...</span>
               <span>
                 {repo.filesProcessed}/{repo.filesTotal || "?"}
               </span>

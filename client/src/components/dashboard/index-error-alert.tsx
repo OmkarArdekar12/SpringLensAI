@@ -24,7 +24,7 @@ function getErrorSummary(message: string) {
       .find((part) => part.trim())
       ?.trim() ?? message;
   if (line.length <= SUMMARY_LIMIT) return line;
-  return `${line.slice(0, SUMMARY_LIMIT - 1)}…`;
+  return `${line.slice(0, SUMMARY_LIMIT - 1)}...`;
 }
 
 export function IndexErrorAlert({ message }: { message: string }) {

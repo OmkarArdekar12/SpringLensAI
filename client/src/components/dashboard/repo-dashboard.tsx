@@ -78,7 +78,7 @@ export function RepoDashboard() {
               <EmptyMedia variant="icon">
                 <FolderGit2 />
               </EmptyMedia>
-              <EmptyTitle>Couldn’t load repositories</EmptyTitle>
+              <EmptyTitle>Couldn't load repositories</EmptyTitle>
               <EmptyDescription>
                 {(reposQuery.error as Error).message}
               </EmptyDescription>

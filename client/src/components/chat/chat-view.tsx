@@ -74,7 +74,7 @@ export function ChatView({ repoId }: { repoId: string }) {
 
   if (repoQuery.isLoading) {
     return (
-      <AppShell title="Loading chat…">
+      <AppShell title="Loading chat...">
         <div className="grid flex-1 gap-4 p-4 md:grid-cols-[18rem_1fr]">
           <Skeleton className="min-h-80 rounded-2xl" />
           <Skeleton className="min-h-80 rounded-2xl" />

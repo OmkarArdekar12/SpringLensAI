@@ -25,10 +25,6 @@ import { Label } from "@/components/shadcn-ui/label";
 import { Spinner } from "@/components/shadcn-ui/spinner";
 import { useCurrentUser, useDeleteAccount } from "@/hooks/use-auth";
 
-/**
- * "Danger zone": permanently deletes the account.
- * The user must type their GitHub username before the final button becomes active.
- */
 export function DeleteAccountCard() {
   const { data: user } = useCurrentUser();
   const deleteAccount = useDeleteAccount();
@@ -40,7 +36,6 @@ export function DeleteAccountCard() {
     username !== "" && typed.trim().toLowerCase() === username.toLowerCase();
 
   function handleOpenChange(next: boolean) {
-    // Don't allow closing the dialog while the deletion request is running
     if (deleteAccount.isPending) return;
     setOpen(next);
     if (!next) setTyped("");

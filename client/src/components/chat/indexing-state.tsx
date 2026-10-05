@@ -62,8 +62,8 @@ export function IndexingState({
         <EmptyTitle>Indexing {repo.fullName}</EmptyTitle>
         <EmptyDescription>
           {filesTotal > 0
-            ? `${filesProcessed} of ${filesTotal} files · ${chunkCount} chunks embedded`
-            : "Fetching repository files and preparing embeddings…"}
+            ? `${filesProcessed} of ${filesTotal} files - ${chunkCount} chunks embedded`
+            : "Fetching repository files and preparing embeddings..."}
         </EmptyDescription>
       </EmptyHeader>
       <div className="w-full max-w-sm space-y-2">

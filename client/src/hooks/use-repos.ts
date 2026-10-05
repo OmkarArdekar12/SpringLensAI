@@ -26,7 +26,6 @@ export function useRepos() {
   return useQuery({
     queryKey: queryKeys.repos.list(),
     queryFn: async () => {
-      // Fast path: what we already stored. First visit: sync from GitHub.
       const repos = await api.listRepos(false);
       if (repos.length === 0) {
         return api.listRepos(true);
@@ -72,7 +71,7 @@ export function useStartIndexing() {
       });
       toast.add({
         title: "Indexing started",
-        description: `Indexing ${repo.fullName}…`,
+        description: `Indexing ${repo.fullName}...`,
         type: "loading",
       });
     },
@@ -94,7 +93,7 @@ export function useRefreshRepos() {
       toast.promise(api.listRepos(true), {
         loading: {
           title: "Syncing repositories",
-          description: "Fetching the latest repos from GitHub…",
+          description: "Fetching the latest repos from GitHub...",
           type: "loading",
         },
         success: (repos) => ({

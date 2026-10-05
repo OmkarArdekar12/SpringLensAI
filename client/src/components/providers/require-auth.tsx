@@ -32,8 +32,8 @@ export function RequireAuth({ children }: { children: React.ReactNode }) {
           <Spinner className="size-6" />
           <p className="text-sm">
             {failureCount > 0
-              ? "Waking up the server — this can take up to a minute…"
-              : "Loading your workspace…"}
+              ? "Waking up the server - this can take up to a minute..."
+              : "Loading your workspace..."}
           </p>
         </div>
       </div>
@@ -45,7 +45,7 @@ export function RequireAuth({ children }: { children: React.ReactNode }) {
   if (isError || !user) {
     return (
       <div className="flex min-h-svh flex-col items-center justify-center gap-3 p-6 text-center">
-        <p className="font-medium">We couldn’t reach the server</p>
+        <p className="font-medium">We couldn't reach the server</p>
         <p className="max-w-sm text-sm text-muted-foreground">
           {(error as Error | null)?.message ?? "Please try again."}
         </p>
