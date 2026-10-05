@@ -8,8 +8,14 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Private, per-user pages and the API proxy have no business in search results
-        disallow: ["/dashboard", "/chat", "/auth", "/api", "/oauth2", "/login/oauth2"],
+        disallow: [
+          "/dashboard",
+          "/chat",
+          "/auth",
+          "/api",
+          "/oauth2",
+          "/login/oauth2",
+        ],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
