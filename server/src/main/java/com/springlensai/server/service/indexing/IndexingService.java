@@ -31,16 +31,11 @@ import com.springlensai.server.service.github.GithubApiClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Background pipeline that turns a GitHub repository into searchable vectors:
- * list files -> download -> split into chunks -> embed with Gemini -> store in pgvector.
- */
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class IndexingService {
 
-    /** Chunks sent to Gemini per embedding call (kept small to respect token limits). */
     private static final int VECTOR_BATCH_SIZE = 16;
     private static final int PROGRESS_EVERY_N_FILES = 5;
 
@@ -64,34 +59,29 @@ public class IndexingService {
     @Value("${app.indexing.embed-max-retries:5}")
     private int embedMaxRetries;
 
-    /**
-     * If the server stopped (deploy, crash, free-tier sleep) while a job was running, the repo would
-     * stay INDEXING forever. Mark those jobs FAILED so the user can retry with one click.
-     */
     @EventListener(ApplicationReadyEvent.class)
     public void failInterruptedJobs() {
         try {
             List<Repository> stuck = repositoryRepository.findByIndexStatus(IndexStatus.INDEXING);
-            for (Repository repo : stuck) {
+            for(Repository repo : stuck) {
                 repo.setIndexStatus(IndexStatus.FAILED);
                 repo.setErrorMessage("Indexing was interrupted by a server restart. Please retry.");
                 repo.setUpdatedAt(Instant.now());
             }
-            if (!stuck.isEmpty()) {
+            if(!stuck.isEmpty()) {
                 repositoryRepository.saveAll(stuck);
                 log.warn("Marked {} interrupted indexing job(s) as FAILED", stuck.size());
             }
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             log.warn("Could not recover interrupted indexing jobs: {}", ex.getMessage());
         }
     }
 
-    /** Synchronous part: validate ownership, flip status to INDEXING, reset counters. */
     public Repository startIndexing(UUID repoId, UUID userId) {
         Repository repo = repositoryRepository.findByIdAndUserId(repoId, userId)
-                .orElseThrow(() -> new NotFoundException("Repository not found"));
+                          .orElseThrow(() -> new NotFoundException("Repository not found"));
 
-        if (repo.getIndexStatus() == IndexStatus.INDEXING) {
+        if(repo.getIndexStatus() == IndexStatus.INDEXING) {
             throw new BadRequestException("Repository is already being indexed");
         }
 
@@ -104,12 +94,11 @@ public class IndexingService {
         return repositoryRepository.save(repo);
     }
 
-    /** Asynchronous part: runs on the "indexingExecutor" thread pool. */
     @Async("indexingExecutor")
     public void indexAsync(UUID repoId, UUID userId) {
         try {
             doIndex(repoId, userId);
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             log.error("Indexing failed for repo {}", repoId, ex);
             markFailed(repoId, describeFailure(ex));
         }
@@ -117,22 +106,22 @@ public class IndexingService {
 
     private void doIndex(UUID repoId, UUID userId) {
         Repository repo = repositoryRepository.findById(repoId)
-                .orElseThrow(() -> new NotFoundException("Repository not found"));
+                          .orElseThrow(() -> new NotFoundException("Repository not found"));
         String token = userService.decryptAccessToken(userService.requiredById(userId));
         String branch = repo.getDefaultBranch();
 
         deleteExistingVectors(repoId.toString());
 
         Map<String, Object> tree = gitHubApiClient.getRepoTree(token, repo.getOwner(), repo.getName(), branch);
-        if (tree != null && Boolean.TRUE.equals(tree.get("truncated"))) {
-            log.warn("GitHub truncated the file tree for {} (very large repository)", repo.getFullName());
+        if(tree != null && Boolean.TRUE.equals(tree.get("truncated"))) {
+            log.warn("GitHub truncated the file tree for {}(very large repository)", repo.getFullName());
         }
 
         List<String> filePaths = listIndexableFiles(tree);
-        if (filePaths.isEmpty()) {
+        if(filePaths.isEmpty()) {
             throw new BadRequestException("No indexable source files were found in this repository.");
         }
-        if (filePaths.size() > maxFiles) {
+        if(filePaths.size() > maxFiles) {
             log.info("{} has {} eligible files; indexing the first {}", repo.getFullName(), filePaths.size(), maxFiles);
             filePaths = filePaths.subList(0, maxFiles);
         }
@@ -143,84 +132,82 @@ public class IndexingService {
         int processed = 0;
         int totalChunks = 0;
 
-        for (String path : filePaths) {
+        for(String path : filePaths) {
             try {
                 String content = gitHubApiClient.getFileContent(token, repo.getOwner(), repo.getName(), path, branch);
                 List<Document> chunks = codeChunker.chunkFile(repoId.toString(), path, content);
                 batch.addAll(chunks);
                 totalChunks += chunks.size();
-            } catch (RestClientResponseException ex) {
-                if (ex.getStatusCode().value() == 401) {
+            } catch(RestClientResponseException ex) {
+                if(ex.getStatusCode().value() == 401) {
                     throw ex; // token is dead - no point continuing
                 }
                 log.warn("Skipping file {} in {}: HTTP {}", path, repo.getFullName(), ex.getStatusCode().value());
-            } catch (Exception ex) {
+            } catch(Exception ex) {
                 log.warn("Skipping file {} in {}: {}", path, repo.getFullName(), ex.getMessage());
             }
 
-            if (batch.size() >= VECTOR_BATCH_SIZE) {
+            if(batch.size() >= VECTOR_BATCH_SIZE) {
                 embedAndStore(batch);
                 batch.clear();
             }
 
             processed++;
-            if (processed % PROGRESS_EVERY_N_FILES == 0 || processed == filePaths.size()) {
+            if(processed % PROGRESS_EVERY_N_FILES == 0 || processed == filePaths.size()) {
                 updateProgress(repoId, filePaths.size(), processed, totalChunks);
             }
             rateLimiter.pause();
         }
 
-        if (!batch.isEmpty()) {
+        if(!batch.isEmpty()) {
             embedAndStore(batch);
         }
 
-        if (totalChunks == 0) {
+        if(totalChunks == 0) {
             throw new BadRequestException("The files in this repository had no readable text content.");
         }
 
         markReady(repoId, filePaths.size(), processed, totalChunks, repo.getFullName());
     }
 
-    /** Embeds a batch with Gemini and writes it to pgvector, retrying on rate limits. */
     private void embedAndStore(List<Document> batch) {
         int attempt = 0;
-        while (true) {
+        while(true) {
             try {
                 vectorStore.add(new ArrayList<>(batch));
                 sleep(embedDelayMs);
                 return;
-            } catch (RuntimeException ex) {
+            } catch(RuntimeException ex) {
                 attempt++;
-                if (attempt > embedMaxRetries || !AiErrors.isTransient(ex)) {
+                if(attempt > embedMaxRetries || !AiErrors.isTransient(ex)) {
                     throw ex;
                 }
-                long wait = Math.min(60_000L, 2_000L * (1L << (attempt - 1)));
-                log.warn("Embedding batch failed ({}). Retry {}/{} in {} ms", ex.getMessage(), attempt, embedMaxRetries, wait);
+                long wait = Math.min(60_000L, 2_000L *(1L <<(attempt - 1)));
+                log.warn("Embedding batch failed({}). Retry {}/{} in {} ms", ex.getMessage(), attempt, embedMaxRetries, wait);
                 sleep(wait);
             }
         }
     }
 
     private List<String> listIndexableFiles(Map<String, Object> tree) {
-        if (tree == null || !(tree.get("tree") instanceof List<?> entries)) {
+        if(tree == null || !(tree.get("tree") instanceof List<?> entries)) {
             return List.of();
         }
 
         List<String> paths = new ArrayList<>();
-        for (Object entryObj : entries) {
-            if (!(entryObj instanceof Map<?, ?> entry)) {
+        for(Object entryObj : entries) {
+            if(!(entryObj instanceof Map<?, ?> entry)) {
                 continue;
             }
-            if (!"blob".equals(String.valueOf(entry.get("type")))) {
+            if(!"blob".equals(String.valueOf(entry.get("type")))) {
                 continue;
             }
             String path = String.valueOf(entry.get("path"));
             long size = entry.get("size") instanceof Number n ? n.longValue() : 0L;
-            if (fileFilter.isEligible(path, size, maxFileBytes)) {
+            if(fileFilter.isEligible(path, size, maxFileBytes)) {
                 paths.add(path);
             }
         }
-        // Shallow files first (README, config, top-level sources); deep ones are cut first by max-files.
         paths.sort(Comparator.comparingInt((String p) -> p.split("/").length).thenComparing(Comparator.naturalOrder()));
         return paths;
     }
@@ -229,7 +216,7 @@ public class IndexingService {
         try {
             var filter = new FilterExpressionBuilder().eq(RagSettings.METADATA_REPO_ID, repoId).build();
             vectorStore.delete(filter);
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             log.warn("Could not delete existing vectors for repo {}: {}", repoId, ex.getMessage());
         }
     }
@@ -257,10 +244,9 @@ public class IndexingService {
             repo.setUpdatedAt(Instant.now());
             repositoryRepository.save(repo);
         });
-        log.info("Indexed {} files ({} chunks) for {}", processedFiles, totalChunks, fullName);
+        log.info("Indexed {} files({} chunks) for {}", processedFiles, totalChunks, fullName);
     }
 
-    /** Public so the controller can recover if the job could not even be queued. */
     public void markFailed(UUID repoId, String message) {
         repositoryRepository.findById(repoId).ifPresent(repo -> {
             repo.setIndexStatus(IndexStatus.FAILED);
@@ -272,34 +258,33 @@ public class IndexingService {
         });
     }
 
-    /** Short, user-readable reason shown on the repository card. */
     private String describeFailure(Exception ex) {
-        if (ex instanceof RestClientResponseException r) {
+        if(ex instanceof RestClientResponseException r) {
             int status = r.getStatusCode().value();
-            return switch (status) {
+            return switch(status) {
                 case 401 -> "GitHub rejected the stored access token. Sign out and sign in again.";
                 case 403, 429 -> "GitHub denied access or its rate limit was reached. Try again later.";
                 case 404 -> "Repository or branch not found on GitHub. Check that you still have access.";
                 case 409 -> "This repository is empty.";
-                default -> "GitHub API error (HTTP " + status + ").";
+                default -> "GitHub API error(HTTP " + status + ").";
             };
         }
-        if (ex instanceof BadRequestException || ex instanceof NotFoundException) {
+        if(ex instanceof BadRequestException || ex instanceof NotFoundException) {
             return ex.getMessage();
         }
-        if (AiErrors.isTransient(ex)) {
+        if(AiErrors.isTransient(ex)) {
             return AiErrors.userMessage(ex) + " Gemini's free tier has tight limits; retry in a few minutes.";
         }
         return ex.getMessage() != null ? ex.getMessage() : "Unexpected indexing error.";
     }
 
     private static void sleep(long millis) {
-        if (millis <= 0) {
+        if(millis <= 0) {
             return;
         }
         try {
             Thread.sleep(millis);
-        } catch (InterruptedException e) {
+        } catch(InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new IllegalStateException("Indexing interrupted", e);
         }

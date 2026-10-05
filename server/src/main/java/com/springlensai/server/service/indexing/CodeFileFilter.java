@@ -5,7 +5,6 @@ import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
-/** Decides which repository files are worth indexing, and detects a file's language. */
 @Component
 public class CodeFileFilter {
 
@@ -32,40 +31,38 @@ public class CodeFileFilter {
             "composer.lock", "cargo.lock", "poetry.lock");
 
     public boolean isEligible(String path, long sizeBytes, long maxFileBytes) {
-        if (path == null || path.isBlank()) {
+        if(path == null || path.isBlank()) {
             return false;
         }
         String normalized = path.replace('\\', '/');
         String lower = normalized.toLowerCase(Locale.ROOT);
 
-        for (String part : lower.split("/")) {
-            if (SKIP_DIR_PARTS.contains(part)) {
+        for(String part : lower.split("/")) {
+            if(SKIP_DIR_PARTS.contains(part)) {
                 return false;
             }
         }
 
         String fileName = lower.substring(lower.lastIndexOf('/') + 1);
-        if (SKIP_FILENAMES.contains(fileName)) {
+        if(SKIP_FILENAMES.contains(fileName)) {
             return false;
         }
-        // Dot-files such as .env are skipped on purpose: they often contain secrets.
-        if (fileName.startsWith(".")) {
+        if(fileName.startsWith(".")) {
             return false;
         }
-        // Minified bundles and source maps are noise for code Q&A.
-        if (fileName.contains(".min.") || fileName.endsWith(".map")) {
+        if(fileName.contains(".min.") || fileName.endsWith(".map")) {
             return false;
         }
-        if (sizeBytes > maxFileBytes) {
+        if(sizeBytes > maxFileBytes) {
             return false;
         }
 
-        if ("dockerfile".equals(fileName) || "makefile".equals(fileName)) {
+        if("dockerfile".equals(fileName) || "makefile".equals(fileName)) {
             return true;
         }
 
         int dot = fileName.lastIndexOf('.');
-        if (dot < 0) {
+        if(dot < 0) {
             return false;
         }
         String ext = fileName.substring(dot + 1);
@@ -75,14 +72,14 @@ public class CodeFileFilter {
     public String detectLanguage(String path) {
         String lower = path.toLowerCase(Locale.ROOT);
         String fileName = lower.substring(lower.lastIndexOf('/') + 1);
-        if ("dockerfile".equals(fileName)) {
+        if("dockerfile".equals(fileName)) {
             return "dockerfile";
         }
-        if ("makefile".equals(fileName)) {
+        if("makefile".equals(fileName)) {
             return "makefile";
         }
         int dot = fileName.lastIndexOf('.');
-        if (dot < 0) {
+        if(dot < 0) {
             return "text";
         }
         return fileName.substring(dot + 1);
