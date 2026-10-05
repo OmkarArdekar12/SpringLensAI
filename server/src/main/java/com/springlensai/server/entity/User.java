@@ -59,11 +59,11 @@ public class User {
     private void onCreate() {
         Instant now = Instant.now();
 
-        if (createdAt == null) {
+        if(createdAt == null) {
             createdAt = now;
         }
 
-        if (updatedAt == null) {
+        if(updatedAt == null) {
             updatedAt = now;
         }
     }
