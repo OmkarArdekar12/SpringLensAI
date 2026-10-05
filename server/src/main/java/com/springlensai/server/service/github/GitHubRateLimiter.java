@@ -3,7 +3,6 @@ package com.springlensai.server.service.github;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/** Tiny delay helper to stay under GitHub's secondary rate limits while indexing. */
 @Component
 public class GitHubRateLimiter {
 
@@ -14,12 +13,12 @@ public class GitHubRateLimiter {
     }
 
     public void pause() {
-        if (delayMs <= 0) {
+        if(delayMs <= 0) {
             return;
         }
         try {
             Thread.sleep(delayMs);
-        } catch (InterruptedException e) {
+        } catch(InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new IllegalStateException("Interrupted while rate limiting", e);
         }
