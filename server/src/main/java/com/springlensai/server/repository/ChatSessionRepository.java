@@ -17,7 +17,6 @@ public interface ChatSessionRepository extends JpaRepository<ChatSession, UUID> 
 
     Optional<ChatSession> findByIdAndUserId(UUID id, UUID userId);
 
-    /** Deletes all chat sessions of the user (used by account deletion). */
     @Modifying
     @Query("delete from ChatSession s where s.userId = :userId")
     int deleteAllByUserId(@Param("userId") UUID userId);

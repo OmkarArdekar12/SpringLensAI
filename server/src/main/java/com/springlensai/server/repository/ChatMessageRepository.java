@@ -14,7 +14,6 @@ public interface ChatMessageRepository extends JpaRepository<ChatMessage, UUID> 
 
     List<ChatMessage> findBySessionIdOrderByCreatedAtAsc(UUID sessionId);
 
-    /** Deletes every message of every chat session owned by the user (used by account deletion). */
     @Modifying
     @Query("delete from ChatMessage m where m.sessionId in (select s.id from ChatSession s where s.userId = :userId)")
     int deleteAllByUserId(@Param("userId") UUID userId);

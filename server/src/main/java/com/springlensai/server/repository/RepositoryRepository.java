@@ -20,12 +20,10 @@ public interface RepositoryRepository extends JpaRepository<Repository, UUID> {
 
     Optional<Repository> findByUserIdAndGithubRepoId(UUID userId, Long githubRepoId);
 
-    /** Used on startup to recover jobs that were running when the server stopped. */
     List<Repository> findByIndexStatus(IndexStatus indexStatus);
 
     boolean existsByUserIdAndIndexStatus(UUID userId, IndexStatus indexStatus);
 
-    /** Deletes all repository rows of the user (used by account deletion). */
     @Modifying
     @Query("delete from Repository r where r.userId = :userId")
     int deleteAllByUserId(@Param("userId") UUID userId);
