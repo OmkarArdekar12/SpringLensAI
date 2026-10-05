@@ -1,4 +1,3 @@
-/** Single source of truth for brand + SEO values. Edit here, not in every page. */
 function resolveSiteUrl() {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) {
