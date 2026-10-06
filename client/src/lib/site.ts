@@ -11,9 +11,11 @@ export const siteConfig = {
   shortName: "SpringLensAI",
   tagline: "Chat with your GitHub code",
   description:
-    "SpringLensAI indexes your GitHub repositories and lets you ask questions about your code. Get grounded answers with clickable file and line citations, powered by Gemini and retrieval-augmented generation.",
+    "SpringLensAI indexes your GitHub repositories and lets you ask questions about your code. Get grounded answers with clickable file and line citations using retrieval-augmented generation.",
   url: resolveSiteUrl(),
   keywords: [
+    "SpringLensAI",
+    "SpringLens AI",
     "chat with GitHub repository",
     "AI code assistant",
     "codebase Q&A",
