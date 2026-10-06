@@ -163,11 +163,11 @@ export default function HomePage() {
             </h2>
             <ol className="mt-10 grid gap-8 md:grid-cols-3">
               {steps.map((step, index) => (
-                <li key={step.title} className="space-y-3">
+                <li key={step.title} className="space-y-3 group">
                   <div className="flex items-center gap-3">
                     <span className="flex size-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
                       <step.icon
-                        className="size-5 text-muted-foreground"
+                        className="size-5 group-hover:animate-bounce"
                         aria-hidden="true"
                       />
                     </span>
