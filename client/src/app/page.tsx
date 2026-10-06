@@ -166,16 +166,15 @@ export default function HomePage() {
                 <li key={step.title} className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="flex size-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-                      {index + 1}
+                      <step.icon
+                        className="size-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                     </span>
-                    <step.icon
-                      className="size-5 text-muted-foreground"
-                      aria-hidden="true"
-                    />
+                    <h3 className="font-heading text-lg font-medium">
+                      {step.title}
+                    </h3>
                   </div>
-                  <h3 className="font-heading text-lg font-medium">
-                    {step.title}
-                  </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {step.body}
                   </p>

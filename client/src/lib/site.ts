@@ -9,7 +9,7 @@ function resolveSiteUrl() {
 export const siteConfig = {
   name: "SpringLensAI",
   shortName: "SpringLensAI",
-  tagline: "Chat with your GitHub code",
+  tagline: "Chat with your code",
   description:
     "SpringLensAI indexes your GitHub repositories and lets you ask questions about your code. Get grounded answers with clickable file and line citations using retrieval-augmented generation.",
   url: resolveSiteUrl(),
