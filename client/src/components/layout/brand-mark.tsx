@@ -11,7 +11,7 @@ export function BrandMark({ className }: { className?: string }) {
     >
       <SpringLensIcon className="size-8 drop-shadow-[0_0_1px_rgba(0,255,0,0.5)]" />
       <span className="font-heading text-[1.05rem] leading-none">
-        SpringLens AI
+        SpringLensAI
       </span>
     </div>
   );
