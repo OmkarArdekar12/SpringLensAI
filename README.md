@@ -33,7 +33,9 @@
 <img src="https://img.shields.io/badge/Render-00D1FF?style=for-the-badge&logo=render&logoColor=white"/>
 </a>
 <br/>
-<a href="./LICENSE"><img src="https://img.shields.io/github/license/OmkarArdekar12/SpringLensAI?color=brightgreen&style=for-the-badge"/></a>
+<a href="./LICENSE">
+  <img src="https://img.shields.io/github/license/OmkarArdekar12/SpringLensAI?style=for-the-badge&color=brightgreen"/>
+</a>
 </h2>
 
 <div id="springlensai-description">
@@ -334,7 +336,7 @@
 <div>
   <h2 id="database-design"><a href="#readme-index">SpringLensAI Database Design 💾🗃️</a></h2>
   <div width="90%" align="center">
-    <img src="./docs/springlensai-architecture.png" alt="System Architecture Diagram" width="100%" align="center" />
+    <img src="./docs/springlensai-er-diagram.png" alt="Database Design Diagram" width="100%" align="center" />
   </div>
 </div>
 
