@@ -8,7 +8,7 @@ import {
   Lock,
   MessageSquare,
   RotateCcw,
-  Sparkles,
+  Plus,
 } from "lucide-react";
 
 import { IndexErrorAlert } from "@/components/dashboard/index-error-alert";
@@ -177,7 +177,7 @@ export function RepoCard({ repo }: { repo: Repository }) {
               </>
             ) : (
               <>
-                <Sparkles data-icon="inline-start" />
+                <Plus data-icon="inline-start" />
                 Index
               </>
             )}

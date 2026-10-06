@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  FolderGit2,
-  MessageSquareCode,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, FolderGit2, MessageSquareCode, Plus } from "lucide-react";
 
 import { BackendWarmup } from "@/components/marketing/backend-warmup";
 import { ChatPreview } from "@/components/marketing/chat-preview";
@@ -30,7 +25,7 @@ const steps = [
   {
     title: "Index a repository",
     body: "SpringLens AI reads your source files, splits them into chunks and stores their embeddings in Postgres with pgvector.",
-    icon: Sparkles,
+    icon: Plus,
   },
   {
     title: "Ask in plain English",
