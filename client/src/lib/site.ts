@@ -3,10 +3,6 @@ function resolveSiteUrl() {
   if (explicit) {
     return explicit.replace(/\/$/, "");
   }
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (vercel) {
-    return `https://${vercel}`;
-  }
   return "http://localhost:3000";
 }
 
@@ -26,6 +22,8 @@ export const siteConfig = {
     "Gemini code search",
     "GitHub code explorer",
     "developer onboarding tool",
+    "CodeElevate Community",
+    "Omkar Ardekar",
   ],
   twitter: "",
   githubRepo: "https://github.com/OmkarArdekar12/SpringLensAI",
