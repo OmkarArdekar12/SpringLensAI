@@ -4,7 +4,7 @@
 <a href="https://springlensai.vercel.app">
 <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMDA3NEJEIiBkPSJNNTIuNTgxIDY3LjgxN3MtMy4yODQgMS45MTEgMi4zNDEgMi41NTdjNi44MTQuNzc4IDEwLjI5Ny42NjYgMTcuODA1LS43NTMgMCAwIDEuOTc5IDEuMjM3IDQuNzM1IDIuMzA5LTE2LjgzNiA3LjIxMy0zOC4xMDQtLjQxOC0yNC44ODEtNC4xMTN6bS0yLjA1OS05LjQxNXMtMy42ODQgMi43MjkgMS45NDUgMy4zMTFjNy4yOC43NTEgMTMuMDI3LjgxMyAyMi45NzktMS4xMDMgMCAwIDEuMzczIDEuMzk2IDMuNTM2IDIuMTU3LTIwLjM1MiA1Ljk1NC00My4wMjEuNDY5LTI4LjQ2LTQuMzY1eiIvPjxwYXRoIGZpbGw9IiNFQTJEMkUiIGQ9Ik02Ny44NjUgNDIuNDMxYzQuMTUxIDQuNzc4LTEuMDg4IDkuMDc0LTEuMDg4IDkuMDc0czEwLjUzMy01LjQzNyA1LjY5Ni0xMi4yNDhjLTQuNTE5LTYuMzQ5LTcuOTgyLTkuNTAyIDEwLjc3MS0yMC4zNzguMDAxIDAtMjkuNDM4IDcuMzUtMTUuMzc5IDIzLjU1MnoiLz48cGF0aCBmaWxsPSIjMDA3NEJEIiBkPSJNOTAuMTMyIDc0Ljc4MXMyLjQzMiAyLjAwNS0yLjY3OCAzLjU1NWMtOS43MTYgMi45NDMtNDAuNDQ0IDMuODMxLTQ4Ljk3OS4xMTctMy4wNjYtMS4zMzUgMi42ODctMy4xODcgNC40OTYtMy41NzYgMS44ODctLjQwOSAyLjk2NS0uMzM0IDIuOTY1LS4zMzQtMy40MTItMi40MDMtMjIuMDU1IDQuNzE5LTkuNDY5IDYuNzYyIDM0LjMyNCA1LjU2MyA2Mi41NjctMi41MDYgNTMuNjY1LTYuNTI0em0tMzUuOTctMjYuMTM0cy0xNS42MjkgMy43MTMtNS41MzQgNS4wNjNjNC4yNjQuNTcgMTIuNzU4LjQzOSAyMC42NzYtLjIyNSA2LjQ2OS0uNTQzIDEyLjk2MS0xLjcwNCAxMi45NjEtMS43MDRzLTIuMjc5Ljk3OC0zLjkzIDIuMTA0Yy0xNS44NzQgNC4xNzUtNDYuNTMzIDIuMjMtMzcuNzA2LTIuMDM4IDcuNDYzLTMuNjExIDEzLjUzMy0zLjIgMTMuNTMzLTMuMnpNODIuMiA2NC4zMTdjMTYuMTM1LTguMzgyIDguNjc0LTE2LjQzOCAzLjQ2Ny0xNS4zNTMtMS4yNzMuMjY2LTEuODQ1LjQ5Ni0xLjg0NS40OTZzLjQ3NS0uNzQ0IDEuMzc4LTEuMDYzYzEwLjMwMi0zLjYyIDE4LjIyMyAxMC42ODEtMy4zMjIgMTYuMzQ1IDAgMCAuMjQ3LS4yMjQuMzIyLS40MjV6Ii8+PHBhdGggZmlsbD0iI0VBMkQyRSIgZD0iTTcyLjQ3NCAxLjMxM3M4LjkzNSA4LjkzOS04LjQ3NiAyMi42ODJjLTEzLjk2MiAxMS4wMjctMy4xODQgMTcuMzEzLS4wMDYgMjQuNDk4LTguMTUtNy4zNTQtMTQuMTI4LTEzLjgyOC0xMC4xMTgtMTkuODUyIDUuODg5LTguODQyIDIyLjIwNC0xMy4xMzEgMTguNi0yNy4zMjh6Ii8+PHBhdGggZmlsbD0iIzAwNzRCRCIgZD0iTTU1Ljc0OSA4Ny4wMzljMTUuNDg0Ljk5IDM5LjI2OS0uNTUxIDM5LjgzMi03Ljg3OCAwIDAtMS4wODIgMi43NzctMTIuNzk5IDQuOTgxLTEzLjIxOCAyLjQ4OC0yOS41MjMgMi4xOTktMzkuMTkxLjYwMyAwIDAgMS45OCAxLjY0IDEyLjE1OCAyLjI5NHoiLz48cGF0aCBmaWxsPSIjRUEyRDJFIiBkPSJNOTQuODY2IDEwMC4xODFoLS40NzJ2LS4yNjRoMS4yN3YuMjY0aC0uNDd2MS4zMTdoLS4zMjlsLjAwMS0xLjMxN3ptMi41MzUuMDY2aC0uMDA2bC0uNDY4IDEuMjUxaC0uMjE2bC0uNDY1LTEuMjUxaC0uMDA1djEuMjUxaC0uMzEydi0xLjU4MWguNDU3bC40MzEgMS4xMTkuNDMyLTEuMTE5aC40NTR2MS41ODFoLS4zMDJ2LTEuMjUxem0tNDQuMTkgMTQuNzljLTEuNDYgMS4yNjYtMy4wMDQgMS45NzgtNC4zOTEgMS45NzgtMS45NzQgMC0zLjA0NS0xLjE4Ni0zLjA0NS0zLjA4NSAwLTIuMDU1IDEuMTQ2LTMuNTYgNS43MzgtMy41NmgxLjY5N3Y0LjY2N2guMDAxem00LjAzMSA0LjU0OHYtMTQuMDc3YzAtMy41OTktMi4wNTMtNS45NzMtNi45OTctNS45NzMtMi44ODYgMC01LjQxNi43MTQtNy40NzMgMS42MjJsLjU5MiAyLjQ5M2MxLjYyLS41OTUgMy43MTUtMS4xNDcgNS43NzEtMS4xNDcgMi44NSAwIDQuMDc1IDEuMTQ3IDQuMDc1IDMuNTIxdjEuNzc5aC0xLjQyNGMtNi45MjEgMC0xMC4wNDQgMi42ODUtMTAuMDQ0IDYuNzIzIDAgMy40NzkgMi4wNTggNS40NTYgNS45MzMgNS40NTYgMi40OSAwIDQuMzUxLTEuMDI4IDYuMDg4LTIuNTMzbC4zMTYgMi4xMzdoMy4xNjN2LS4wMDF6bTEzLjQ1MiAwaC01LjAyN2wtNi4wNTEtMTkuNjg5aDQuMzkxbDMuNzU2IDEyLjA5OS44MzUgMy42MzVjMS44OTYtNS4yNTggMy4yNC0xMC41OTYgMy45MTItMTUuNzMzaDQuMjcxYy0xLjE0MyA2LjQ4MS0zLjIwMyAxMy41OTgtNi4wODcgMTkuNjg4em0xOS4yODgtNC41NDhjLTEuNDY1IDEuMjY2LTMuMDEgMS45NzgtNC4zOTIgMS45NzgtMS45NzYgMC0zLjA0Ni0xLjE4Ni0zLjA0Ni0zLjA4NSAwLTIuMDU1IDEuMTQ5LTMuNTYgNS43MzYtMy41NmgxLjcwMXY0LjY2N2guMDAxem00LjAzMyA0LjU0OHYtMTQuMDc3YzAtMy41OTktMi4wNTktNS45NzMtNi45OTktNS45NzMtMi44ODkgMC01LjQxOC43MTQtNy40NzUgMS42MjJsLjU5MyAyLjQ5M2MxLjYyLS41OTUgMy43MTgtMS4xNDcgNS43NzQtMS4xNDcgMi44NDYgMCA0LjA3NCAxLjE0NyA0LjA3NCAzLjUyMXYxLjc3OWgtMS40MjRjLTYuOTIzIDAtMTAuMDQ1IDIuNjg1LTEwLjA0NSA2LjcyMyAwIDMuNDc5IDIuMDU2IDUuNDU2IDUuOTMgNS40NTYgMi40OTEgMCA0LjM0OS0xLjAyOCA2LjA5MS0yLjUzM2wuMzE4IDIuMTM3aDMuMTYzdi0uMDAxem0tNTYuNjkzIDMuMzQ2Yy0xLjE0NyAxLjY3OS0zLjAwNSAzLjAwOC01LjAzNyAzLjc1N2wtMS45ODktMi4zNDVjMS41NDctLjc5NCAyLjg3Mi0yLjA3NSAzLjQ4OS0zLjI2OS41MzItMS4wNjMuNzUzLTIuNDMuNzUzLTUuNzAxVjkyLjg5MWg0LjI4NHYyMi4xNzNjMCA0LjM3NS0uMzQ4IDYuMTQ0LTEuNSA3Ljg2N3oiLz48L3N2Zz4=&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
 <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
@@ -211,7 +211,7 @@
   <h2 id="technologies-used"><a href="#readme-index">Technologies Used 💻🛠️</a></h2>
   <p>
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMDA3NEJEIiBkPSJNNTIuNTgxIDY3LjgxN3MtMy4yODQgMS45MTEgMi4zNDEgMi41NTdjNi44MTQuNzc4IDEwLjI5Ny42NjYgMTcuODA1LS43NTMgMCAwIDEuOTc5IDEuMjM3IDQuNzM1IDIuMzA5LTE2LjgzNiA3LjIxMy0zOC4xMDQtLjQxOC0yNC44ODEtNC4xMTN6bS0yLjA1OS05LjQxNXMtMy42ODQgMi43MjkgMS45NDUgMy4zMTFjNy4yOC43NTEgMTMuMDI3LjgxMyAyMi45NzktMS4xMDMgMCAwIDEuMzczIDEuMzk2IDMuNTM2IDIuMTU3LTIwLjM1MiA1Ljk1NC00My4wMjEuNDY5LTI4LjQ2LTQuMzY1eiIvPjxwYXRoIGZpbGw9IiNFQTJEMkUiIGQ9Ik02Ny44NjUgNDIuNDMxYzQuMTUxIDQuNzc4LTEuMDg4IDkuMDc0LTEuMDg4IDkuMDc0czEwLjUzMy01LjQzNyA1LjY5Ni0xMi4yNDhjLTQuNTE5LTYuMzQ5LTcuOTgyLTkuNTAyIDEwLjc3MS0yMC4zNzguMDAxIDAtMjkuNDM4IDcuMzUtMTUuMzc5IDIzLjU1MnoiLz48cGF0aCBmaWxsPSIjMDA3NEJEIiBkPSJNOTAuMTMyIDc0Ljc4MXMyLjQzMiAyLjAwNS0yLjY3OCAzLjU1NWMtOS43MTYgMi45NDMtNDAuNDQ0IDMuODMxLTQ4Ljk3OS4xMTctMy4wNjYtMS4zMzUgMi42ODctMy4xODcgNC40OTYtMy41NzYgMS44ODctLjQwOSAyLjk2NS0uMzM0IDIuOTY1LS4zMzQtMy40MTItMi40MDMtMjIuMDU1IDQuNzE5LTkuNDY5IDYuNzYyIDM0LjMyNCA1LjU2MyA2Mi41NjctMi41MDYgNTMuNjY1LTYuNTI0em0tMzUuOTctMjYuMTM0cy0xNS42MjkgMy43MTMtNS41MzQgNS4wNjNjNC4yNjQuNTcgMTIuNzU4LjQzOSAyMC42NzYtLjIyNSA2LjQ2OS0uNTQzIDEyLjk2MS0xLjcwNCAxMi45NjEtMS43MDRzLTIuMjc5Ljk3OC0zLjkzIDIuMTA0Yy0xNS44NzQgNC4xNzUtNDYuNTMzIDIuMjMtMzcuNzA2LTIuMDM4IDcuNDYzLTMuNjExIDEzLjUzMy0zLjIgMTMuNTMzLTMuMnpNODIuMiA2NC4zMTdjMTYuMTM1LTguMzgyIDguNjc0LTE2LjQzOCAzLjQ2Ny0xNS4zNTMtMS4yNzMuMjY2LTEuODQ1LjQ5Ni0xLjg0NS40OTZzLjQ3NS0uNzQ0IDEuMzc4LTEuMDYzYzEwLjMwMi0zLjYyIDE4LjIyMyAxMC42ODEtMy4zMjIgMTYuMzQ1IDAgMCAuMjQ3LS4yMjQuMzIyLS40MjV6Ii8+PHBhdGggZmlsbD0iI0VBMkQyRSIgZD0iTTcyLjQ3NCAxLjMxM3M4LjkzNSA4LjkzOS04LjQ3NiAyMi42ODJjLTEzLjk2MiAxMS4wMjctMy4xODQgMTcuMzEzLS4wMDYgMjQuNDk4LTguMTUtNy4zNTQtMTQuMTI4LTEzLjgyOC0xMC4xMTgtMTkuODUyIDUuODg5LTguODQyIDIyLjIwNC0xMy4xMzEgMTguNi0yNy4zMjh6Ii8+PHBhdGggZmlsbD0iIzAwNzRCRCIgZD0iTTU1Ljc0OSA4Ny4wMzljMTUuNDg0Ljk5IDM5LjI2OS0uNTUxIDM5LjgzMi03Ljg3OCAwIDAtMS4wODIgMi43NzctMTIuNzk5IDQuOTgxLTEzLjIxOCAyLjQ4OC0yOS41MjMgMi4xOTktMzkuMTkxLjYwMyAwIDAgMS45OCAxLjY0IDEyLjE1OCAyLjI5NHoiLz48cGF0aCBmaWxsPSIjRUEyRDJFIiBkPSJNOTQuODY2IDEwMC4xODFoLS40NzJ2LS4yNjRoMS4yN3YuMjY0aC0uNDd2MS4zMTdoLS4zMjlsLjAwMS0xLjMxN3ptMi41MzUuMDY2aC0uMDA2bC0uNDY4IDEuMjUxaC0uMjE2bC0uNDY1LTEuMjUxaC0uMDA1djEuMjUxaC0uMzEydi0xLjU4MWguNDU3bC40MzEgMS4xMTkuNDMyLTEuMTE5aC40NTR2MS41ODFoLS4zMDJ2LTEuMjUxem0tNDQuMTkgMTQuNzljLTEuNDYgMS4yNjYtMy4wMDQgMS45NzgtNC4zOTEgMS45NzgtMS45NzQgMC0zLjA0NS0xLjE4Ni0zLjA0NS0zLjA4NSAwLTIuMDU1IDEuMTQ2LTMuNTYgNS43MzgtMy41NmgxLjY5N3Y0LjY2N2guMDAxem00LjAzMSA0LjU0OHYtMTQuMDc3YzAtMy41OTktMi4wNTMtNS45NzMtNi45OTctNS45NzMtMi44ODYgMC01LjQxNi43MTQtNy40NzMgMS42MjJsLjU5MiAyLjQ5M2MxLjYyLS41OTUgMy43MTUtMS4xNDcgNS43NzEtMS4xNDcgMi44NSAwIDQuMDc1IDEuMTQ3IDQuMDc1IDMuNTIxdjEuNzc5aC0xLjQyNGMtNi45MjEgMC0xMC4wNDQgMi42ODUtMTAuMDQ0IDYuNzIzIDAgMy40NzkgMi4wNTggNS40NTYgNS45MzMgNS40NTYgMi40OSAwIDQuMzUxLTEuMDI4IDYuMDg4LTIuNTMzbC4zMTYgMi4xMzdoMy4xNjN2LS4wMDF6bTEzLjQ1MiAwaC01LjAyN2wtNi4wNTEtMTkuNjg5aDQuMzkxbDMuNzU2IDEyLjA5OS44MzUgMy42MzVjMS44OTYtNS4yNTggMy4yNC0xMC41OTYgMy45MTItMTUuNzMzaDQuMjcxYy0xLjE0MyA2LjQ4MS0zLjIwMyAxMy41OTgtNi4wODcgMTkuNjg4em0xOS4yODgtNC41NDhjLTEuNDY1IDEuMjY2LTMuMDEgMS45NzgtNC4zOTIgMS45NzgtMS45NzYgMC0zLjA0Ni0xLjE4Ni0zLjA0Ni0zLjA4NSAwLTIuMDU1IDEuMTQ5LTMuNTYgNS43MzYtMy41NmgxLjcwMXY0LjY2N2guMDAxem00LjAzMyA0LjU0OHYtMTQuMDc3YzAtMy41OTktMi4wNTktNS45NzMtNi45OTktNS45NzMtMi44ODkgMC01LjQxOC43MTQtNy40NzUgMS42MjJsLjU5MyAyLjQ5M2MxLjYyLS41OTUgMy43MTgtMS4xNDcgNS43NzQtMS4xNDcgMi44NDYgMCA0LjA3NCAxLjE0NyA0LjA3NCAzLjUyMXYxLjc3OWgtMS40MjRjLTYuOTIzIDAtMTAuMDQ1IDIuNjg1LTEwLjA0NSA2LjcyMyAwIDMuNDc5IDIuMDU2IDUuNDU2IDUuOTMgNS40NTYgMi40OTEgMCA0LjM0OS0xLjAyOCA2LjA5MS0yLjUzM2wuMzE4IDIuMTM3aDMuMTYzdi0uMDAxem0tNTYuNjkzIDMuMzQ2Yy0xLjE0NyAxLjY3OS0zLjAwNSAzLjAwOC01LjAzNyAzLjc1N2wtMS45ODktMi4zNDVjMS41NDctLjc5NCAyLjg3Mi0yLjA3NSAzLjQ4OS0zLjI2OS41MzItMS4wNjMuNzUzLTIuNDMuNzUzLTUuNzAxVjkyLjg5MWg0LjI4NHYyMi4xNzNjMCA0LjM3NS0uMzQ4IDYuMTQ0LTEuNSA3Ljg2N3oiLz48L3N2Zz4=&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![Spring MVC](https://img.shields.io/badge/Spring%20MVC-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
@@ -329,280 +329,42 @@
 
 <div>
   <h2 id="system-architecture"><a href="#readme-index">System Architecture of SpringLensAI ⌨️🏗️</a></h2>
-
-### High-Level Architecture (with the RAG Pipeline)
-
-The diagram below shows the whole system and how the RAG pipeline runs inside the backend. **Step 1 (Indexing)** turns a repository into vectors once. **Step 2 (Question Answering)** runs for every question.
-
-```mermaid
-flowchart LR
-    U["User browser"]
-
-    subgraph Vercel["Vercel: Next.js"]
-        PAGES["Pages and UI: landing, login, dashboard, chat"]
-        PROXY["proxy.ts route guard"]
-        RW["rewrites: /api, /oauth2, /login/oauth2"]
-    end
-
-    subgraph Render["Render: Spring Boot container"]
-        SEC["Spring Security: GitHub OAuth2 and sessions"]
-        CTRL["Controllers: Auth, Account, Repo, Chat, Health"]
-        SVC["Services: User, Repo, Chat, Account, Indexing"]
-
-        subgraph RAG["RAG Pipeline"]
-            subgraph IDX["Step 1: Indexing, runs in the background"]
-                I1["Select files: filter by extension and size, shallow paths first"]
-                I2["Line-aware chunker: about 800 chars, 100 overlap, start and end lines"]
-                I3["Embed chunks in batches of 16, retry with back-off"]
-                I1 --> I2 --> I3
-            end
-            subgraph QRY["Step 2: Question Answering, runs for every question"]
-                Q1["Embed the question"]
-                Q2["Retrieve top 8 similar chunks, filter by repoId"]
-                Q3["Prompt builder: grounding rules, last 6 messages, retrieved code"]
-                Q4["Stream the Gemini answer token by token"]
-                Q5["Save answer with file and line citations, send over SSE"]
-                Q1 --> Q2 --> Q3 --> Q4 --> Q5
-            end
-        end
-    end
-
-    subgraph NeonDB["NeonDB: PostgreSQL"]
-        REL[("users, repositories, chat_sessions, chat_messages")]
-        VEC[("vector_store: pgvector")]
-        SES[("spring_session tables")]
-    end
-
-    GH["GitHub: OAuth and REST API"]
-    GEM["Google Gemini: chat and embeddings"]
-
-    U -->|"HTTPS"| PAGES
-    U -->|"fetch /api/... and OAuth redirects"| RW
-    PAGES --> PROXY
-    RW -->|"HTTPS proxy"| SEC
-    SEC --> CTRL --> SVC
-    SEC --> SES
-    SEC -->|"OAuth2 login"| GH
-    SVC --> REL
-
-    SVC -->|"index repository"| I1
-    GH -->|"git tree and file contents"| I1
-    I3 -->|"embed"| GEM
-    I3 -->|"store vectors"| VEC
-
-    SVC -->|"ask question"| Q1
-    Q1 -->|"embed"| GEM
-    Q2 -->|"similarity search"| VEC
-    Q4 -->|"generate"| GEM
-    Q5 --> REL
-    Q5 -->|"SSE stream"| U
-```
-
-**How the RAG pipeline works in this architecture**
-
-1. **Select files:** one GitHub tree call, keep source, config and docs (max 100 KB each), skip dependencies, build output, lock files, minified files and dot-files.
-2. **Chunk:** split on line boundaries with overlap, so every chunk knows its file and line range.
-3. **Embed and store:** Gemini embeddings (768 dimensions) are saved in pgvector with metadata (`repoId`, `filePath`, `startLine`, `endLine`).
-4. **Retrieve:** the question is embedded and the 8 closest chunks of only that repository are fetched (cosine distance, HNSW index).
-5. **Prompt:** the system prompt forces answers only from the provided code, asks the model to say when it is unsure, and treats repository code as untrusted data (prompt-injection guard). The last 6 messages are added for follow-up questions.
-6. **Generate and cite:** Gemini streams the answer over SSE, and the final message is saved with the distinct files and line ranges as citations.
-
-**Key design decision: a same-origin proxy.** Vercel and Render are different sites, so a cookie set by Render would be a third-party cookie, which Safari and (increasingly) Chrome block. Next.js `rewrites` forward `/api/*`, `/oauth2/*` and `/login/oauth2/*` to Render, so the browser only ever sees one origin. The session cookie is first-party, CORS is not needed, and the GitHub OAuth callback URL lives on the Vercel domain.
-
-### Deployment Topology
-
-```mermaid
-flowchart TB
-    DEV["Developer: git push"] --> REPO["GitHub repository"]
-    REPO -->|"auto deploy, Root Directory = client"| VERCEL["Vercel build: next build"]
-    REPO -->|"auto deploy, Dockerfile in server/"| RENDER["Render build: Web Service (Docker) or Blueprint (render.yaml)"]
-    VERCEL --> EDGE["Vercel edge / CDN: static pages, assets, rewrites"]
-    RENDER --> CONTAINER["Render web service: JRE + app.jar, PORT from env"]
-    EDGE -->|"rewrites to BACKEND_URL"| CONTAINER
-    CONTAINER -->|"JDBC over SSL"| NEON[("NeonDB PostgreSQL + pgvector")]
-    CONTAINER -->|"HTTPS"| GITHUB["api.github.com"]
-    CONTAINER -->|"HTTPS"| GEMINI["generativelanguage.googleapis.com"]
-```
-
-### Backend Layering
-
-```mermaid
-flowchart TB
-    C["controller: HTTP in and out, validation"] --> S["service: business logic"]
-    S --> R["repository: Spring Data JPA interfaces"]
-    S --> A["service.ai: RAG retrieval, prompts, streaming"]
-    S --> G["service.github: GitHub API client"]
-    S --> I["service.indexing: filter, chunker, background job"]
-    R --> E["entity: JPA tables"]
-    A --> V[("VectorStore: pgvector")]
-    X["exceptions: GlobalExceptionHandler"] -.-> C
-    CF["config and security: SecurityConfig, CryptoConfig, CorsConfig, AppConfig"] -.-> C
-```
-
-Rule of thumb: controllers never touch the database directly; they call services, and services call repositories.
-
-### Components and Responsibilities
-
-| Component                 | Responsibility                                                          |
-| ------------------------- | ----------------------------------------------------------------------- |
-| Next.js pages             | Render the UI, call `/api/*`, stream chat answers, guard private routes |
-| `next.config.ts` rewrites | Make the API same-origin, extended proxy timeout (180 s) for streaming  |
-| `SecurityConfig`          | Public vs protected URLs, GitHub login, 401 for API calls, logout       |
-| `GithubOAuth2UserService` | After login: save or update the user and the encrypted token            |
-| `RepoService`             | Sync repositories from GitHub into the database, ownership checks       |
-| `IndexingService`         | Background pipeline: list, filter, download, chunk, embed, store        |
-| `CodeContextRetriever`    | Embed a question and find the most similar chunks of one repository     |
-| `ChatStreamHandler`       | Stream Gemini tokens as SSE and persist the final answer                |
-| `AccountService`          | Permanently delete a user and all of their data                         |
-| `ConfigurationChecker`    | Validate critical settings before startup with a readable error list    |
-| `GlobalExceptionHandler`  | Uniform JSON errors, no internal details leaked                         |
-
+  <div width="90%" align="center">
+    <img src="./docs/springlensai-architecture.png" alt="System Architecture Diagram" width="100%" align="center" />
+  </div>
 </div>
 
 ---
 
 <div>
   <h2 id="database-design"><a href="#readme-index">SpringLensAI Database Design 💾🗃️</a></h2>
-
-PostgreSQL with the `vector`, `hstore` and `uuid-ossp` extensions. Application tables are generated by Hibernate (`ddl-auto=update`), `vector_store` by Spring AI, and the session tables by Spring Session.
-
-### Entity-Relationship Diagram
-
-```mermaid
-erDiagram
-    USERS ||--o{ REPOSITORIES : "owns"
-    USERS ||--o{ CHAT_SESSIONS : "starts"
-    REPOSITORIES ||--o{ CHAT_SESSIONS : "is discussed in"
-    CHAT_SESSIONS ||--o{ CHAT_MESSAGES : "contains"
-    REPOSITORIES ||--o{ VECTOR_STORE : "indexed as chunks (metadata.repoId)"
-    USERS ||--o{ SPRING_SESSION : "logged in as (principal_name)"
-    SPRING_SESSION ||--o{ SPRING_SESSION_ATTRIBUTES : "has"
-
-    USERS {
-        uuid id PK
-        bigint github_id UK
-        varchar github_username UK
-        varchar display_name
-        varchar avatar_url
-        text access_token "AES encrypted"
-        varchar token_scopes
-        timestamptz created_at
-        timestamptz updated_at
-    }
-
-    REPOSITORIES {
-        uuid id PK
-        uuid user_id "logical FK to users"
-        bigint github_repo_id "UK with user_id"
-        varchar owner
-        varchar name
-        varchar full_name
-        boolean is_private
-        varchar default_branch
-        varchar language
-        varchar html_url
-        text description
-        varchar index_status "PENDING INDEXING READY FAILED"
-        timestamptz indexed_at
-        int chunk_count
-        int files_total
-        int files_processed
-        text error_message
-        timestamptz created_at
-        timestamptz updated_at
-    }
-
-    CHAT_SESSIONS {
-        uuid id PK
-        uuid user_id "logical FK to users"
-        uuid repository_id "logical FK to repositories"
-        varchar title
-        timestamptz created_at
-    }
-
-    CHAT_MESSAGES {
-        uuid id PK
-        uuid session_id "logical FK to chat_sessions"
-        varchar role "USER or ASSISTANT"
-        text content
-        text citations "JSON array"
-        timestamptz created_at
-    }
-
-    VECTOR_STORE {
-        uuid id PK
-        text content "chunk text with file header"
-        json metadata "repoId filePath language startLine endLine chunkIndex"
-        vector embedding "768 dimensions"
-    }
-
-    SPRING_SESSION {
-        char primary_id PK
-        char session_id UK
-        bigint creation_time
-        bigint last_access_time
-        int max_inactive_interval
-        bigint expiry_time
-        varchar principal_name "user id as text"
-    }
-
-    SPRING_SESSION_ATTRIBUTES {
-        char session_primary_id PK "FK ON DELETE CASCADE"
-        varchar attribute_name PK
-        bytea attribute_bytes "serialized security context"
-    }
-```
-
-> **Important:** the JPA entities store related ids as plain `UUID` columns (not `@ManyToOne`), so the database has **no foreign-key constraints** between `users`, `repositories`, `chat_sessions` and `chat_messages`, and `vector_store` is linked only through `metadata.repoId`. Nothing cascades automatically, so all cleanup (for example account deletion) is done explicitly in code, in child-to-parent order. The only real foreign key is `spring_session_attributes.session_primary_id`, which cascades from `spring_session`.
-
-### Table Dictionary
-
-| Table                       | Purpose                                             | Key columns                                                                                                                                                                                                                                                                                                                                |
-| --------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `users`                     | One row per GitHub user                             | `id` (PK), `github_id` (unique), `github_username` (unique), `display_name`, `avatar_url`, `access_token` (AES encrypted), `token_scopes`, `created_at`, `updated_at`                                                                                                                                                                      |
-| `repositories`              | A GitHub repository for a user plus its index state | `id` (PK), `user_id`, `github_repo_id` (unique with `user_id`), `owner`, `name`, `full_name`, `is_private`, `default_branch`, `language`, `html_url`, `description`, `index_status` (`PENDING`, `INDEXING`, `READY`, `FAILED`), `indexed_at`, `chunk_count`, `files_total`, `files_processed`, `error_message`, `created_at`, `updated_at` |
-| `chat_sessions`             | One conversation about a repository                 | `id` (PK), `user_id`, `repository_id`, `title`, `created_at`                                                                                                                                                                                                                                                                               |
-| `chat_messages`             | Messages of a session                               | `id` (PK), `session_id`, `role` (`USER`, `ASSISTANT`), `content`, `citations` (JSON text), `created_at`                                                                                                                                                                                                                                    |
-| `vector_store`              | Embedded code chunks (Spring AI)                    | `id` (PK), `content`, `metadata` (JSON: `repoId`, `filePath`, `language`, `startLine`, `endLine`, `chunkIndex`), `embedding` (`vector(768)`, HNSW index, cosine)                                                                                                                                                                           |
-| `spring_session`            | HTTP sessions (Spring Session)                      | `primary_id` (PK), `session_id` (unique), `creation_time`, `last_access_time`, `max_inactive_interval`, `expiry_time`, `principal_name` (the user id)                                                                                                                                                                                      |
-| `spring_session_attributes` | Session attributes                                  | `session_primary_id` (PK, FK with ON DELETE CASCADE), `attribute_name` (PK), `attribute_bytes`                                                                                                                                                                                                                                             |
-
-Indexes: `UNIQUE (user_id, github_repo_id)` and `idx_repositories_index_status` on `repositories`, `idx_chat_sessions_user_repo (user_id, repository_id)`, `idx_chat_messages_session (session_id, created_at)`.
-
-### Deletion Order (no cascades)
-
-```mermaid
-flowchart LR
-    A["1. vector_store rows per repo"] --> B["2. chat_messages"] --> C["3. chat_sessions"] --> D["4. repositories"] --> E["5. users"] --> F["6. spring_session rows"]
-```
-
-Steps 2 to 5 run in one database transaction. Step 1 happens first because vectors have no foreign key.
-
+  <div width="90%" align="center">
+    <img src="./docs/springlensai-architecture.png" alt="System Architecture Diagram" width="100%" align="center" />
+  </div>
 </div>
 
 ---
 
 <div>
   <h2 id="folder-file-structure"><a href="#readme-index">Folders & Files Structure 📂🗄️</a></h2>
-  <h3 id="overview-folder-file-structure">Overview of Folders & Files Structure</h3>
 
 ```bash
-📂 SPRINGLENSAI
-├── 📁 server                      # Spring Boot API (Java)
+📂 SpringLensAI
+├── 📁 server
 │   ├── 📁 src
 │   ├── 📁 .mvn
 │   ├── Dockerfile
 │   ├── .dockerignore
-│   ├── .env.example
+│   ├── .env
 │   ├── .gitignore
 │   ├── .gitattributes
 │   ├── mvnw
 │   ├── mvnw.cmd
 │   └── pom.xml
-├── 📁 client                      # Next.js web app
+├── 📁 client
 │   ├── 📁 src
 │   ├── 📁 public
-│   ├── .env.example
+│   ├── .env
 │   ├── .gitignore
 │   ├── components.json
 │   ├── eslint.config.mjs
@@ -617,232 +379,8 @@ Steps 2 to 5 run in one database transaction. Step 1 happens first because vecto
 │   └── 📁 postgres
 │       └── init-extensions.sql
 ├── 📁 docs
-│   ├── DEPLOYMENT.md
-│   ├── LOCAL_SETUP.md
-│   └── PROJECT_GUIDE.md
 ├── docker-compose.yml
 ├── render.yaml
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
-<h3 id="detail-folder-file-structure">Detailed Folders & Files Structure</h3>
-
-```bash
-📂 SPRINGLENSAI
-├── 📁 server
-│   ├── 📁 src
-│   │   ├── 📁 main
-│   │   │   ├── 📁 java/com/springlensai/server
-│   │   │   │   ├── ServerApplication.java
-│   │   │   │   ├── 📁 config
-│   │   │   │   │   ├── AppConfig.java                  # async executor, RestClient builder
-│   │   │   │   │   ├── ConfigurationChecker.java       # validates settings before startup
-│   │   │   │   │   ├── CorsConfig.java
-│   │   │   │   │   ├── CryptoConfig.java               # AES TextEncryptor for GitHub tokens
-│   │   │   │   │   └── SecurityConfig.java             # OAuth2 login, 401 for API, logout
-│   │   │   │   ├── 📁 controller
-│   │   │   │   │   ├── AuthController.java
-│   │   │   │   │   ├── AccountController.java
-│   │   │   │   │   ├── RepoController.java
-│   │   │   │   │   ├── ChatController.java
-│   │   │   │   │   └── HealthController.java
-│   │   │   │   ├── 📁 dto
-│   │   │   │   │   ├── UserResponse.java
-│   │   │   │   │   ├── RepositoryResponse.java
-│   │   │   │   │   ├── IndexStatusResponse.java
-│   │   │   │   │   ├── ChatSessionResponse.java
-│   │   │   │   │   ├── ChatMessageResponse.java
-│   │   │   │   │   ├── CitationDto.java
-│   │   │   │   │   ├── CreateChatSessionRequest.java
-│   │   │   │   │   ├── ChatMessageRequest.java
-│   │   │   │   │   └── DeleteAccountRequest.java
-│   │   │   │   ├── 📁 entity
-│   │   │   │   │   ├── User.java
-│   │   │   │   │   ├── Repository.java
-│   │   │   │   │   ├── ChatSession.java
-│   │   │   │   │   ├── ChatMessage.java
-│   │   │   │   │   ├── IndexStatus.java
-│   │   │   │   │   └── MessageRole.java
-│   │   │   │   ├── 📁 exceptions
-│   │   │   │   │   ├── BadRequestException.java
-│   │   │   │   │   ├── NotFoundException.java
-│   │   │   │   │   ├── UnauthorizedException.java
-│   │   │   │   │   └── GlobalExceptionHandler.java
-│   │   │   │   ├── 📁 repository
-│   │   │   │   │   ├── UserRepository.java
-│   │   │   │   │   ├── RepositoryRepository.java
-│   │   │   │   │   ├── ChatSessionRepository.java
-│   │   │   │   │   └── ChatMessageRepository.java
-│   │   │   │   ├── 📁 security
-│   │   │   │   │   ├── AppUserPrincipal.java
-│   │   │   │   │   ├── CurrentUser.java
-│   │   │   │   │   └── GithubOAuth2UserService.java
-│   │   │   │   └── 📁 service
-│   │   │   │       ├── UserService.java
-│   │   │   │       ├── RepoService.java
-│   │   │   │       ├── ChatService.java
-│   │   │   │       ├── AccountService.java
-│   │   │   │       ├── AccountDataEraser.java
-│   │   │   │       ├── 📁 ai
-│   │   │   │       │   ├── AiErrors.java
-│   │   │   │       │   ├── ChatPromptBuilder.java
-│   │   │   │       │   ├── ChatStreamHandler.java
-│   │   │   │       │   ├── CitationMapper.java
-│   │   │   │       │   ├── CodeContextRetriever.java
-│   │   │   │       │   ├── RagSettings.java
-│   │   │   │       │   └── RetrievedContext.java
-│   │   │   │       ├── 📁 github
-│   │   │   │       │   ├── GithubApiClient.java
-│   │   │   │       │   └── GitHubRateLimiter.java
-│   │   │   │       └── 📁 indexing
-│   │   │   │           ├── CodeChunker.java
-│   │   │   │           ├── CodeFileFilter.java
-│   │   │   │           └── IndexingService.java
-│   │   │   └── 📁 resources
-│   │   │       └── application.properties
-│   │   └── 📁 test/java/com/springlensai/server/service/indexing
-│   │       ├── CodeChunkerTest.java
-│   │       └── CodeFileFilterTest.java
-│   ├── 📁 .mvn
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   ├── .env.example
-│   ├── .gitignore
-│   ├── .gitattributes
-│   ├── mvnw
-│   ├── mvnw.cmd
-│   └── pom.xml
-│
-├── 📁 client
-│   ├── 📁 src
-│   │   ├── 📁 app
-│   │   │   ├── layout.tsx
-│   │   │   ├── page.tsx                     # landing page
-│   │   │   ├── globals.css
-│   │   │   ├── error.tsx
-│   │   │   ├── not-found.tsx
-│   │   │   ├── robots.ts
-│   │   │   ├── sitemap.ts
-│   │   │   ├── manifest.ts
-│   │   │   ├── icon.svg
-│   │   │   ├── apple-icon.png
-│   │   │   ├── favicon.ico
-│   │   │   ├── opengraph-image.png
-│   │   │   ├── twitter-image.png
-│   │   │   ├── 📁 login
-│   │   │   │   ├── layout.tsx
-│   │   │   │   └── page.tsx
-│   │   │   ├── 📁 auth/callback
-│   │   │   │   ├── layout.tsx
-│   │   │   │   └── page.tsx
-│   │   │   ├── 📁 dashboard
-│   │   │   │   ├── layout.tsx
-│   │   │   │   ├── page.tsx
-│   │   │   │   ├── 📁 overview
-│   │   │   │   │   └── page.tsx
-│   │   │   │   └── 📁 settings
-│   │   │   │       └── page.tsx
-│   │   │   └── 📁 chat
-│   │   │       ├── layout.tsx
-│   │   │       └── 📁 [repoId]
-│   │   │           └── page.tsx
-│   │   ├── 📁 components
-│   │   │   ├── 📁 shadcn-ui
-│   │   │   │   ├── accordion.tsx
-│   │   │   │   ├── alert.tsx
-│   │   │   │   ├── alert-dialog.tsx
-│   │   │   │   ├── avatar.tsx
-│   │   │   │   ├── badge.tsx
-│   │   │   │   ├── button.tsx
-│   │   │   │   ├── card.tsx
-│   │   │   │   ├── dropdown-menu.tsx
-│   │   │   │   ├── empty.tsx
-│   │   │   │   ├── input.tsx
-│   │   │   │   ├── kbd.tsx
-│   │   │   │   ├── label.tsx
-│   │   │   │   ├── mode-toggle.tsx
-│   │   │   │   ├── progress.tsx
-│   │   │   │   ├── separator.tsx
-│   │   │   │   ├── sheet.tsx
-│   │   │   │   ├── sidebar.tsx
-│   │   │   │   ├── skeleton.tsx
-│   │   │   │   ├── spinner.tsx
-│   │   │   │   ├── textarea.tsx
-│   │   │   │   ├── toast.tsx
-│   │   │   │   └── tooltip.tsx
-│   │   │   ├── 📁 chat
-│   │   │   │   ├── chat-view.tsx
-│   │   │   │   ├── chat-messages.tsx
-│   │   │   │   ├── chat-composer.tsx
-│   │   │   │   ├── chat-sidebar.tsx
-│   │   │   │   ├── chat-markdown.tsx
-│   │   │   │   ├── chat-markdown.css
-│   │   │   │   ├── citation-chips.tsx
-│   │   │   │   └── indexing-state.tsx
-│   │   │   ├── 📁 dashboard
-│   │   │   │   ├── repo-dashboard.tsx
-│   │   │   │   ├── repo-card.tsx
-│   │   │   │   ├── repo-status.tsx
-│   │   │   │   ├── index-error-alert.tsx
-│   │   │   │   ├── overview-dashboard.tsx
-│   │   │   │   ├── settings-dashboard.tsx
-│   │   │   │   └── delete-account-card.tsx
-│   │   │   ├── 📁 icons
-│   │   │   │   ├── language-icon.tsx
-│   │   │   │   └── springlens-icon.tsx
-│   │   │   ├── 📁 layout
-│   │   │   │   ├── app-shell.tsx
-│   │   │   │   └── brand-mark.tsx
-│   │   │   ├── 📁 marketing
-│   │   │   │   ├── chat-preview.tsx
-│   │   │   │   └── backend-warmup.tsx
-│   │   │   └── 📁 providers
-│   │   │       ├── query-provider.tsx
-│   │   │       ├── theme-provider.tsx
-│   │   │       └── require-auth.tsx
-│   │   ├── 📁 hooks
-│   │   │   ├── use-auth.ts
-│   │   │   ├── use-repos.ts
-│   │   │   ├── use-chat.ts
-│   │   │   └── use-mobile.ts
-│   │   ├── 📁 lib
-│   │   │   ├── api.ts
-│   │   │   ├── stream-chat.ts
-│   │   │   ├── query-keys.ts
-│   │   │   ├── dashboard-nav.ts
-│   │   │   ├── site.ts
-│   │   │   └── utils.ts
-│   │   └── proxy.ts                         # route guard (Next.js proxy)
-│   ├── 📁 public
-│   │   ├── springLensAI.png
-│   │   ├── springlensai-logo.svg
-│   │   ├── icon-192.png
-│   │   └── icon-512.png
-│   ├── .env.example
-│   ├── .gitignore
-│   ├── components.json
-│   ├── eslint.config.mjs
-│   ├── next.config.ts                       # rewrites to the API, headers, proxy timeout
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── postcss.config.mjs
-│   ├── tsconfig.json
-│   ├── README.md
-│   └── 📁 node_modules
-│
-├── 📁 docker
-│   └── 📁 postgres
-│       └── init-extensions.sql              # vector, hstore, uuid-ossp
-│
-├── 📁 docs
-│   ├── DEPLOYMENT.md
-│   ├── LOCAL_SETUP.md
-│   └── PROJECT_GUIDE.md
-│
-├── docker-compose.yml                       # local PostgreSQL + pgvector
-├── render.yaml                              # Render blueprint for the API
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -864,54 +402,32 @@ Create a `.env` file inside the **server** directory (it is git-ignored and load
 
 ```bash
 cd server
-cp .env.example .env
+touch .env
 ```
 
 `server/.env`
 
 ```bash
-DATABASE_URL=jdbc:postgresql://localhost:5432/springlensai
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
+DATABASE_URL=jdbc:postgresql://localhost:5432/springlensai or jdbc:postgresql://YOUR-NEON-HOST/springlensai?sslmode=require&channel_binding=require
+DATABASE_USERNAME=postgres or your_neon_username
+DATABASE_PASSWORD=postgres or your_neon_password
 GEMINI_API_KEY=your_gemini_api_key
 GITHUB_CLIENT_ID=your_github_oauth_client_id
 GITHUB_CLIENT_SECRET=your_github_oauth_client_secret
 TOKEN_ENCRYPTOR_PASSWORD=your_long_random_password
 TOKEN_ENCRYPTOR_SALT=your_hex_salt
-FRONTEND_URL=http://localhost:3000 or https://springlensai.vercel.app
-CORS_ALLOWED_ORIGINS=http://localhost:3000 or https://springlensai.vercel.app
-COOKIE_SECURE=false   # true in production (HTTPS)
+FRONTEND_URL=http://localhost:3000
+CORS_ALLOWED_ORIGINS=http://localhost:3000
+COOKIE_SECURE=false
+DB_POOL_SIZE=8
+INDEX_MAX_FILE_BYTES=102400
+INDEX_MAX_FILES=400
+INDEX_CHUNK_SIZE=800
+INDEX_CHUNK_OVERLAP=100
+INDEX_EMBED_DELAY_MS=250
+INDEX_EMBED_MAX_RETRIES=5
+GITHUB_API_DELAY_MS=50
 ```
-
-Generate the hex salt (works on every operating system because Node.js is already installed):
-
-```bash
-node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"
-```
-
-| Variable                                          | Required           | Default                                         | Description                                                                                           |
-| ------------------------------------------------- | ------------------ | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `DATABASE_URL`                                    | production         | `jdbc:postgresql://localhost:5432/springlensai` | **JDBC** URL. NeonDB example: `jdbc:postgresql://HOST/db?sslmode=require`                             |
-| `DATABASE_USERNAME`                               | production         | `postgres`                                      | Database user                                                                                         |
-| `DATABASE_PASSWORD`                               | production         | `postgres`                                      | Database password                                                                                     |
-| `GEMINI_API_KEY`                                  | yes                | -                                               | Google AI Studio API key                                                                              |
-| `GEMINI_CHAT_MODEL`                               | no                 | `gemini-3.8-flash`                              | Gemini chat model                                                                                     |
-| `GEMINI_EMBEDDING_MODEL`                          | no                 | `gemini-embedding-001`                          | Gemini embedding model (768 dimensions configured)                                                    |
-| `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`        | yes                | -                                               | GitHub OAuth App credentials                                                                          |
-| `TOKEN_ENCRYPTOR_PASSWORD`                        | yes                | -                                               | Long random string used to encrypt GitHub tokens                                                      |
-| `TOKEN_ENCRYPTOR_SALT`                            | yes                | -                                               | **Hex** string (even length)                                                                          |
-| `FRONTEND_URL`                                    | yes (production)   | `http://localhost:3000`                         | Public URL of the web app. Used for the OAuth redirect URI and post-login redirect. No trailing slash |
-| `CORS_ALLOWED_ORIGINS`                            | no                 | `http://localhost:3000`                         | Comma-separated allowed origins                                                                       |
-| `COOKIE_SECURE`                                   | production: `true` | `false`                                         | `Secure` flag of the session cookie                                                                   |
-| `PORT`                                            | set by Render      | `8080`                                          | HTTP port                                                                                             |
-| `DB_POOL_SIZE`                                    | no                 | `8`                                             | Hikari maximum pool size                                                                              |
-| `INDEX_MAX_FILES`                                 | no                 | `400`                                           | Max files indexed per repository                                                                      |
-| `INDEX_MAX_FILE_BYTES`                            | no                 | `102400`                                        | Max size of a single file                                                                             |
-| `INDEX_CHUNK_SIZE`, `INDEX_CHUNK_OVERLAP`         | no                 | `800`, `100`                                    | Chunking in characters                                                                                |
-| `INDEX_EMBED_DELAY_MS`, `INDEX_EMBED_MAX_RETRIES` | no                 | `250`, `5`                                      | Gemini pacing and retries                                                                             |
-| `GITHUB_API_DELAY_MS`                             | no                 | `50`                                            | Pause between GitHub file downloads                                                                   |
-| `LOG_SECURITY_LEVEL`                              | no                 | -                                               | Set to `DEBUG` to see why a login or request is denied                                                |
-| `JAVA_OPTS`                                       | no                 | memory-friendly flags in the Dockerfile         | JVM flags                                                                                             |
 
 ### 2. Client (Frontend) Configuration
 
@@ -919,33 +435,24 @@ Create a `.env.local` file inside the **client** directory:
 
 ```bash
 cd client
-cp .env.example .env.local
+touch .env.local
 ```
 
 `client/.env.local`
 
 ```bash
-BACKEND_URL=http://localhost:8080 or https://springlensai.onrender.com
-NEXT_PUBLIC_SITE_URL=http://localhost:3000 or https://springlensai.vercel.app
+BACKEND_URL=http://localhost:8080
+NEXT_PUBLIC_API_URL=http://localhost:8080
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
-
-| Variable               | Required      | Description                                                                                                                                                |
-| ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BACKEND_URL`          | yes on Vercel | URL of the Spring Boot API. Used server-side by the `next.config.ts` rewrites and read at **build** time, so redeploy after changing it. No trailing slash |
-| `NEXT_PUBLIC_SITE_URL` | recommended   | Public URL of the site, used for canonical URLs, the sitemap and Open Graph tags                                                                           |
-
-  </div>
-</div>
 
 ---
 
 <div>
-  <h2 id="installation"><a href="#readme-index">Installation (Run Locally) 💽📩</a></h2>
+  <h2 id="installation"><a href="#readme-index">Installation 💽📩</a></h2>
   <div>
 
-This section runs the **backend (Spring Boot)** and the **frontend (Next.js)** on your own computer.
-
-**Requirements:** Java, Node.js and npm, Git, and a PostgreSQL database with pgvector (run with **Docker** or with **pgAdmin / any PostgreSQL URL**, see Step 3).
+**Requirements:** Java, Node.js and npm, Git, and a PostgreSQL database with pgvector (run with **Docker** or with **pgAdmin / any PostgreSQL URL**).
 
 ### Step 1: Clone the Repository
 
@@ -954,17 +461,7 @@ git clone https://github.com/OmkarArdekar12/SpringLensAI.git
 cd SpringLensAI
 ```
 
-### Step 2: Get the Keys You Need
-
-| Need                     | Where to get it                                                                                                                                                                                                                                                      |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gemini API key           | https://aistudio.google.com/apikey                                                                                                                                                                                                                                   |
-| GitHub OAuth App (local) | GitHub > Settings > Developer settings > OAuth Apps > **New OAuth App**. Homepage URL `http://localhost:3000`, Authorization callback URL `http://localhost:3000/login/oauth2/code/github`. Click **Generate a new client secret** and copy the Client ID and secret |
-| Encryption salt          | `node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"`                                                                                                                                                                                           |
-
-Use `http` (not `https`) and `localhost` (not `127.0.0.1`) everywhere in local development.
-
-### Step 3: Prepare the Database (choose one)
+### Step 2: Prepare the Database (choose one)
 
 **Option A: Docker (PostgreSQL with pgvector)**
 
@@ -973,14 +470,6 @@ Requires Docker Desktop (running). From the project root:
 ```bash
 docker compose up -d
 docker compose ps
-```
-
-Wait until the status is `healthy`. This creates the database `springlensai` (user `postgres`, password `postgres`) on port `5432` and enables the `vector`, `hstore` and `uuid-ossp` extensions automatically. Use this in `server/.env`:
-
-```bash
-DATABASE_URL=jdbc:postgresql://localhost:5432/springlensai
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
 ```
 
 **Option B: pgAdmin / PostgreSQL URL**
@@ -996,42 +485,12 @@ CREATE EXTENSION IF NOT EXISTS hstore;
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ```
 
-3. Put your connection details in `server/.env`. Spring needs the **JDBC** form of the URL, with the username and password in their own variables:
-
-```bash
-DATABASE_URL=jdbc:postgresql://localhost:5432/springlensai
-DATABASE_USERNAME=your_postgres_user
-DATABASE_PASSWORD=your_postgres_password
-```
-
-If you have a PostgreSQL URL like `postgresql://USER:PASS@HOST/DB?sslmode=require`, convert it to:
-
-```bash
-DATABASE_URL=jdbc:postgresql://HOST/DB?sslmode=require
-DATABASE_USERNAME=USER
-DATABASE_PASSWORD=PASS
-```
-
-### Step 4: Configure and Start the Backend
+### Step 4: Start the Backend
 
 ```bash
 cd server
-cp .env.example .env
-```
-
-On Windows PowerShell use `Copy-Item .env.example .env`. Open `server/.env` and fill in `GEMINI_API_KEY`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `TOKEN_ENCRYPTOR_PASSWORD`, `TOKEN_ENCRYPTOR_SALT` and the database values from Step 3 (no quotes, no spaces around `=`). Then run:
-
-```bash
 ./mvnw spring-boot:run
 ```
-
-On Windows use `.\mvnw.cmd spring-boot:run`. The first run downloads dependencies. Wait for `Started ServerApplication`, then verify:
-
-```bash
-curl http://localhost:8080/api/health
-```
-
-Expected: `{"name":"SpringLensAI API","status":"ok"}`. Tables are created automatically on first start. If a setting is wrong, the startup checker prints a short list of exactly what to fix.
 
 ### Step 5: Start the Frontend
 
@@ -1039,16 +498,9 @@ Open a **second terminal**:
 
 ```bash
 cd client
-cp .env.example .env.local
 npm install
 npm run dev
 ```
-
-On Windows PowerShell use `Copy-Item .env.example .env.local`. The defaults (`BACKEND_URL=http://localhost:8080`) already work.
-
-### Step 6: Open the App
-
-Go to **http://localhost:3000**, click **Continue with GitHub**, index a small repository, wait for **Ready**, and ask a question.
 
   </div>
 </div>
@@ -1057,139 +509,33 @@ Go to **http://localhost:3000**, click **Continue with GitHub**, index a small r
 
 <div>
   <h2 id="diagrams"><a href="#readme-index">Structure Flow Diagrams 📊</a></h2>
-
-### Sign in with GitHub
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor U as User
-    participant N as Next.js (Vercel)
-    participant S as Spring Boot (Render)
-    participant GH as GitHub
-    participant DB as PostgreSQL
-
-    U->>N: Click "Continue with GitHub" (GET /oauth2/authorization/github)
-    N->>S: rewrite to Render
-    S-->>U: 302 to github.com/login/oauth/authorize (redirect_uri = FRONTEND_URL/login/oauth2/code/github)
-    U->>GH: Authorize the app
-    GH-->>U: 302 to FRONTEND_URL/login/oauth2/code/github?code=...
-    U->>N: GET callback
-    N->>S: rewrite to Render
-    S->>GH: Exchange code for access token, fetch profile
-    S->>DB: Upsert user (token AES-encrypted)
-    S->>DB: Create session row (Spring Session JDBC)
-    S-->>U: 302 to /auth/callback and Set-Cookie SPRINGLENSAI_SESSION
-    U->>N: GET /auth/callback
-    N->>S: GET /api/auth/me (cookie)
-    S-->>N: 200 user JSON
-    N-->>U: Redirect to /dashboard (and set hint cookie)
-```
-
-### Repository Indexing (RAG step 1)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor U as User
-    participant C as Client
-    participant S as RepoController and IndexingService
-    participant W as Background thread (indexingExecutor)
-    participant GH as GitHub API
-    participant G as Gemini embeddings
-    participant DB as PostgreSQL
-
-    U->>C: Click "Index"
-    C->>S: POST /api/repos/{id}/index
-    S->>DB: status = INDEXING, counters reset
-    S-->>C: 202 Accepted
-    S->>W: indexAsync(repoId, userId)
-    C->>S: Poll GET /api/repos (every 2 s while INDEXING)
-    W->>DB: Delete old vectors of this repo
-    W->>GH: GET git/trees?recursive=1
-    W->>W: Filter files, sort shallow first, cap at max-files
-    loop For each file
-        W->>GH: GET contents/{path}
-        W->>W: Split into line-aligned chunks with start/end lines
-        opt Batch of 16 chunks ready
-            W->>G: Embed batch (retry with backoff on 429/503)
-            W->>DB: Insert vectors into vector_store
-        end
-        W->>DB: Update progress every 5 files
-    end
-    W->>DB: status = READY (or FAILED with a readable message)
-```
-
-If the server restarts while a job runs, repositories left in `INDEXING` are marked `FAILED` on the next startup so the user can retry.
-
-### Asking a Question (RAG step 2 and streaming)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor U as User
-    participant C as Client (useStreamChat)
-    participant S as ChatService
-    participant V as pgvector
-    participant G as Gemini
-    participant DB as PostgreSQL
-
-    U->>C: Type a question
-    C->>S: POST /api/chat/sessions/{id}/messages
-    S->>DB: Verify session and repo ownership, load last 6 messages
-    S->>DB: Save USER message (first one also renames the session)
-    S->>G: Embed the question
-    S->>V: Similarity search (top 8, filter repoId)
-    V-->>S: Matching code chunks with file and line metadata
-    S->>S: Build system prompt and user prompt (history + code + question)
-    S-->>C: SSE event user_message
-    S->>G: Stream chat completion
-    loop Each token
-        G-->>S: token
-        S-->>C: SSE event token
-    end
-    S->>DB: Save ASSISTANT message with citations JSON
-    S-->>C: SSE events assistant_message then done
-    C->>C: Replace live text with the saved message and citation chips
-```
-
-### Delete Account
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor U as User
-    participant C as Settings page
-    participant A as AccountController and AccountService
-    participant V as pgvector
-    participant DB as PostgreSQL
-    participant GH as GitHub
-
-    U->>C: Delete my account, type GitHub username
-    C->>A: POST /api/account/delete { confirmation }
-    A->>A: Username matches? Any repo INDEXING?
-    A->>V: Delete vectors of every indexed repo (filter repoId)
-    A->>DB: One transaction: delete messages, chat sessions, repositories, user
-    A->>DB: Delete all login sessions of the user (best effort)
-    A->>GH: Revoke OAuth authorization for the user (best effort)
-    A-->>C: 204 and expire session cookie
-    C->>C: Clear caches and hint cookie, go to the landing page
-```
-
-What is deleted:
-
-| Data                               | Where                                         | Removed by                                                |
-| ---------------------------------- | --------------------------------------------- | --------------------------------------------------------- |
-| Profile and encrypted GitHub token | `users`                                       | `AccountDataEraser.eraseUserRows`                         |
-| Repositories and index state       | `repositories`                                | same transaction                                          |
-| Chat sessions                      | `chat_sessions`                               | same transaction                                          |
-| Chat messages and citations        | `chat_messages`                               | same transaction                                          |
-| Search vectors                     | `vector_store`                                | `vectorStore.delete(filter repoId == ...)` per repository |
-| Login sessions (all devices)       | `spring_session`, `spring_session_attributes` | `AccountDataEraser.eraseLoginSessions`                    |
-| GitHub authorization               | github.com/settings/applications              | `GithubApiClient.revokeAuthorization`                     |
-
-Deletion is refused while one of the user's repositories is still indexing, because a running job would write new vectors after they were deleted. Every step is idempotent, so if a step fails the user can simply try again.
-
+  <div width="100%">
+    <table width="95%" align="center" border="0">
+      <tr>
+        <td width="90%" colspan="2" align="center">
+          <h3 align="center">Sign in with GitHub</h3>
+          <img src="./docs/githubOAuth.png" width="100%">
+        </td>
+      </tr>
+      <tr>
+        <td width="90%" colspan="2" align="center">
+          <h3 align="center">Repository Indexing (RAG step 1)</h3>
+          <img src="./docs/ragStep1.png" width="100%">
+        </td>
+      </tr>
+      <tr>
+        <td width="90%" colspan="2" align="center">
+          <h3 align="center">Asking a Question (RAG step 2 and streaming)</h3>
+          <img src="./docs/ragStep2.png" width="100%">
+        </td>
+      </tr>
+      <tr>
+        <td width="90%" colspan="2" align="center">
+          <h3 align="center">Delete Account</h3>
+          <img src="./docs/deleteAccount.png" width="100%">
+        </td>
+      </tr>
+    </table>
 </div>
 
 ---
