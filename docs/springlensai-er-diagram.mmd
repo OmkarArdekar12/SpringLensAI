@@ -1,0 +1,83 @@
+erDiagram
+	direction LR
+	USERS {
+		uuid id PK ""  
+		bigint github_id UK ""  
+		varchar github_username UK ""  
+		varchar display_name  ""  
+		varchar avatar_url  ""  
+		text access_token  "AES encrypted"  
+		varchar token_scopes  ""  
+		timestamptz created_at  ""  
+		timestamptz updated_at  ""  
+	}
+
+	REPOSITORIES {
+		uuid id PK ""  
+		uuid user_id  "logical FK to users"  
+		bigint github_repo_id  "UK with user_id"  
+		varchar owner  ""  
+		varchar name  ""  
+		varchar full_name  ""  
+		boolean is_private  ""  
+		varchar default_branch  ""  
+		varchar language  ""  
+		varchar html_url  ""  
+		text description  ""  
+		varchar index_status  "PENDING INDEXING READY FAILED"  
+		timestamptz indexed_at  ""  
+		int chunk_count  ""  
+		int files_total  ""  
+		int files_processed  ""  
+		text error_message  ""  
+		timestamptz created_at  ""  
+		timestamptz updated_at  ""  
+	}
+
+	CHAT_SESSIONS {
+		uuid id PK ""  
+		uuid user_id  "logical FK to users"  
+		uuid repository_id  "logical FK to repositories"  
+		varchar title  ""  
+		timestamptz created_at  ""  
+	}
+
+	CHAT_MESSAGES {
+		uuid id PK ""  
+		uuid session_id  "logical FK to chat_sessions"  
+		varchar role  "USER or ASSISTANT"  
+		text content  ""  
+		text citations  "JSON array"  
+		timestamptz created_at  ""  
+	}
+
+	VECTOR_STORE {
+		uuid id PK ""  
+		text content  "chunk text with file header"  
+		json metadata  "repoId filePath language startLine endLine chunkIndex"  
+		vector embedding  "768 dimensions"  
+	}
+
+	SPRING_SESSION {
+		char primary_id PK ""  
+		char session_id UK ""  
+		bigint creation_time  ""  
+		bigint last_access_time  ""  
+		int max_inactive_interval  ""  
+		bigint expiry_time  ""  
+		varchar principal_name  "user id as text"  
+	}
+
+	SPRING_SESSION_ATTRIBUTES {
+		char session_primary_id PK "FK ON DELETE CASCADE"  
+		varchar attribute_name PK ""  
+		bytea attribute_bytes  "serialized security context"  
+	}
+
+	USERS||--o{REPOSITORIES:"owns"
+	USERS||--o{CHAT_SESSIONS:"starts"
+	REPOSITORIES||--o{CHAT_SESSIONS:"is discussed in"
+	CHAT_SESSIONS||--o{CHAT_MESSAGES:"contains"
+	REPOSITORIES||--o{VECTOR_STORE:"indexed as chunks (metadata.repoId)"
+	USERS||--o{SPRING_SESSION:"logged in as (principal_name)"
+	SPRING_SESSION||--o{SPRING_SESSION_ATTRIBUTES:"has"

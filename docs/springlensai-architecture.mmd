@@ -1,0 +1,81 @@
+flowchart LR
+ subgraph Vercel["Vercel: Next.js"]
+        PAGES["Pages and UI: landing, login, dashboard, chat"]
+        PROXY["proxy.ts route guard"]
+        RW["rewrites: /api, /oauth2, /login/oauth2"]
+  end
+ subgraph IDX["Step 1: Indexing, runs in the background"]
+        I1["Select files: filter by extension and size, shallow paths first"]
+        I2["Line-aware chunker: about 800 chars, 100 overlap, start and end lines"]
+        I3["Embed chunks in batches of 16, retry with back-off"]
+  end
+ subgraph QRY["Step 2: Question Answering, runs for every question"]
+        Q1["Embed the question"]
+        Q2["Retrieve top 8 similar chunks, filter by repoId"]
+        Q3["Prompt builder: grounding rules, last 6 messages, retrieved code"]
+        Q4["Stream the Gemini answer token by token"]
+        Q5["Save answer with file and line citations, send over SSE"]
+  end
+ subgraph RAG["RAG Pipeline"]
+        IDX
+        QRY
+  end
+ subgraph Render["Render: Spring Boot container"]
+        SEC["`**Spring Security**: GitHub OAuth2 and sessions`"]
+        CTRL["`**Controllers**: Auth, Account, Repo, Chat, Health`"]
+        SVC["`**Services**: User, Repo, Chat, Account, Indexing`"]
+        RAG
+  end
+ subgraph NeonDB["NeonDB: PostgreSQL"]
+        REL[("users, repositories, chat_sessions, chat_messages")]
+        VEC[("vector_store: pgvector")]
+        SES[("spring_session tables")]
+  end
+    I1 --> I2
+    I2 --> I3
+    Q1 --> Q2
+    Q2 --> Q3
+    Q3 --> Q4
+    Q4 --> Q5
+    U["User browser"] -- HTTPS --> PAGES
+    U -- "fetch /api/... and OAuth redirects" --> RW
+    PAGES --> PROXY
+    RW -- HTTPS proxy --> SEC
+    SEC --> CTRL & SES
+    CTRL --> SVC
+    SEC -- OAuth2 login --> GH["GitHub: OAuth and REST API"]
+    SVC --> REL
+    SVC -- index repository --> I1
+    GH -- git tree and file contents --> I1
+    I3 -- embed --> GEM["Google Gemini: chat and embeddings"]
+    I3 -- store vectors --> VEC
+    SVC -- ask question --> Q1
+    Q1 -- embed --> GEM
+    Q2 -- similarity search --> VEC
+    Q4 -- generate --> GEM
+    Q5 --> REL
+    Q5 -- SSE stream --> U
+
+    style I1 fill:#EA580C,color:#ffffff
+    style I2 fill:#EA580C,color:#ffffff
+    style I3 fill:#EA580C,color:#ffffff
+    style Q1 fill:#9A3412,color:#ffffff
+    style Q2 fill:#9A3412,color:#ffffff
+    style Q3 fill:#9A3412,color:#ffffff
+    style Q4 fill:#9A3412,color:#ffffff
+    style Q5 fill:#9A3412,color:#ffffff
+    style IDX fill:#E1BEE7
+    style QRY fill:#E1BEE7
+    style SEC fill:#16A34A,color:#ffffff
+    style CTRL color:#ffffff,fill:#16A34A
+    style SVC fill:#16A34A,color:#ffffff
+    style RAG stroke:#000000,fill:#FFF7ED,color:#9A3412
+    style GEM fill:#7C3AED,color:#ffffff
+    style Render fill:#F0FDF4,color:#000000,stroke:#16A34A
+    style NeonDB fill:#0891B2
+    style U fill:#FFFACD,color:#000000
+    style GH fill:#0F172A,color:#FFFFFF
+    style Vercel fill:#EFF6FF,color:#000000
+    style PAGES fill:#1E3A8A,color:#FFFFFF
+    style PROXY fill:#1E3A8A,color:#FFFFFF
+    style RW fill:#1E3A8A,color:#FFFFFF
