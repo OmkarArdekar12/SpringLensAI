@@ -1,0 +1,7 @@
+*.html linguist-detectable=false
+
+frontend/index.html linguist-detectable=true
+
+docs/** linguist-documentation
+docs/** linguist-generated
+docs/** linguist-vendored
