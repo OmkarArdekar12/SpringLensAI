@@ -34,10 +34,11 @@
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/Render-00D1FF?style=for-the-badge&logo=render&logoColor=white"/>
 <img src="https://img.shields.io/badge/Google%20Search%20Console-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white"/>
 </a>
 <br/>
 <a href="./LICENSE">
-  <img src="https://img.shields.io/github/license/OmkarArdekar12/SpringLensAI?style=for-the-badge&color=brightgreen"/>
+  <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge"/
 </a>
 </h2>
 
@@ -57,19 +58,20 @@
   </h2>
 </div>
 
-<!-- <div id="springlensai-preview-image">
+<!-- <div id="springlensai-preview">
   <h2>
-    <a href="https://springlensai.vercel.app" target="_blank" rel="noopener noreferrer">
-      <p><img src="./client/public/springLensAI.png" width="23px" valign="middle"/> SpringLensAI Preview</p>
+    <a href="https://www.youtube.com/watch?v=4-Udx0xvsO0" target="_blank" rel="noopener noreferrer">
+      <p><img src="./client/public/springLensAI.png" width="30px" valign="middle"/> SpringLensAI Demo / Preview Video</p>
+      <p>🎥 Click here to watch full video on YouTube</p>
     </a>
-    <img src="./client/public/springLensAIGIF.png" alt="SpringLensAI" width="95%"/>
+    <img src="./frontend/public/videos/springlensaiGIF.gif"  alt="SpringLensAI Video" width="95%"/>
   </h2>
 </div> -->
 
 <div id="seo-result">
   <h2>
     <a href="https://www.google.com/search?q=site:springlensai.vercel.app" target="_blank" rel="noopener noreferrer">
-      <p>SpringLensAI SEO Visibility <img src="./client/public/springLensAI.png" width="30px"/></p>
+      <p>SpringLensAI SEO Visibility <img src="./client/public/springLensAI.png" width="30px" valign="middle"/></p>
       <p>📈 Click here to see the SEO Visibility/Result</p>
     </a>
     <div width="100%">
@@ -88,7 +90,7 @@
 <div id="performance">
   <h2>
     <a href="https://omkarardekar12.github.io/SpringLensAI/reports/lighthouse-report/" target="_blank" rel="noopener noreferrer">
-      <p><img src="./client/public/springLensAI.png" width="30px"/> SpringLensAI Performance</p>
+      <p><img src="./client/public/springLensAI.png" width="30px" valign="middle"/> SpringLensAI Performance</p>
       <p>📊 Click here to see the Lighthouse Detailed Performance Report</p>
     </a>
     <div width="100%">
@@ -112,7 +114,9 @@
     <ol>
       <li><a href="#springlensai-description">Description</a></li>
       <li><a href="#springlensai-live">Live Application</a></li>
-      <!-- <li><a href="#springlensai-preview-image">Demo / Preview Video</a></li> -->
+      <li><a href="#springlensai-preview">Demo / Preview Video</a></li>
+      <li><a href="#seo-result">SEO Visibility & Indexing</a></li>
+      <li><a href="#performance">Live-Measured Web Performance & SEO Validation</a></li>
       <li><a href="#overview">Overview</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#technologies-used">Technologies Used / Tech Stack</a></li>
@@ -289,6 +293,8 @@
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-00D1FF?style=for-the-badge&logo=render&logoColor=white)
+![Google Search Console](https://img.shields.io/badge/Google%20Search%20Console-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 
   </p>
 
@@ -340,7 +346,7 @@
         <tr>
           <td>&#10148;</td>
           <td>SEO (Search Engine Optimization) & Website Optimization</td>
-          <td>Next.js Metadata API (title template, description, keywords, canonical URL), Open Graph and Twitter Card tags, Schema.org JSON-LD (SoftwareApplication, FAQPage), robots.txt, sitemap.xml, web app manifest, app icons and OG images, <code>noindex</code> for private pages, semantic HTML, server-rendered landing page, <code>next/font</code>, HTTPS (via Vercel and Render)</td>
+          <td>Next.js Metadata API (title template, description, keywords, canonical URL), Open Graph and Twitter Card tags, Schema.org JSON-LD (SoftwareApplication, FAQPage), robots.txt, sitemap.xml, web app manifest, app icons and OG images, <code>noindex</code> for private pages, semantic HTML, server-rendered landing page, <code>next/font</code>, HTTPS (via Vercel and Render), Google Search Console</td>
         </tr>
         <tr>
           <td>&#10148;</td>
@@ -350,7 +356,7 @@
         <tr>
           <td>&#10148;</td>
           <td>Deployment & Hosting</td>
-          <td>Vercel (Frontend Hosting), Render (Backend Hosting as a Web Service (Docker) or Blueprint (<code>render.yaml</code>)), NeonDB (Database Hosting), GitHub (Source and OAuth)</td>
+          <td>Vercel (Frontend Hosting), Render (Backend Hosting as a Web Service (Docker) or Blueprint (<code>render.yaml</code>)), NeonDB (Database Hosting), GitHub (Source and OAuth), GitHub Pages (Lighthouse Report)</td>
         </tr>
       </tbody>
     </table>
