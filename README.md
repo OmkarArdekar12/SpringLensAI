@@ -66,6 +66,44 @@
   </h2>
 </div> -->
 
+<div id="seo-result">
+  <h2>
+    <a href="https://www.google.com/search?q=site:springlensai.vercel.app" target="_blank" rel="noopener noreferrer">
+      <p>SpringLensAI SEO Visibility <img src="./client/public/springLensAI.png" width="30px"/></p>
+      <p>📈 Click here to see the SEO Visibility/Result</p>
+    </a>
+    <div width="100%">
+      <table width="95%" align="center" border="0">
+        <tr width="100%">
+          <td width="100%" colspan="2" align="center">
+            <h5>Production-Grade SEO, Indexing & Web Performance Implementation</h5>
+            <img src="./docs/seo.png" width="100%">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </h2>
+</div>
+
+<div id="performance">
+  <h2>
+    <a href="https://omkarardekar12.github.io/SpringLensAI/reports/lighthouse-report/" target="_blank" rel="noopener noreferrer">
+      <p><img src="./client/public/springLensAI.png" width="30px"/> SpringLensAI Performance</p>
+      <p>📊 Click here to see the Lighthouse Detailed Performance Report</p>
+    </a>
+    <div width="100%">
+      <table width="95%" align="center" border="0">
+        <tr width="100%">
+          <td width="100%" colspan="2" align="center">
+            <h5>Production-Grade, Live-Measured Web Performance & SEO Validation</h5>
+            <img src="./docs/performance.png" width="100%">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </h2>
+</div>
+
 ---
 
 <div>
