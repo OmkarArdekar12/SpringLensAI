@@ -78,12 +78,7 @@
       <li><a href="#technologies-used">Technologies Used / Tech Stack</a></li>
       <li><a href="#system-architecture">System Architecture of SpringLensAI</a></li>
       <li><a href="#database-design">SpringLensAI Database Design</a></li>
-      <li><a href="#folder-file-structure">Folders and Files Structure</a>
-      <ul type="disc">
-        <li><a href="#overview-folder-file-structure">Overview of Folders and Files Structure</a></li>
-        <li><a href="#detail-folder-file-structure">Detailed Folders and Files Structure</a></li>
-      </ul>
-      </li>
+      <li><a href="#folder-file-structure">Folders and Files Structure</a></li>
       <li><a href="#environment-variables">Environment Variables Configuration</a></li>
       <li><a href="#installation">Installation (Run Locally)</a></li>
       <li><a href="#diagrams">Structure Flow Diagrams</a></li>
