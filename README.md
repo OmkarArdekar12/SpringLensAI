@@ -38,7 +38,7 @@
 </a>
 <br/>
 <a href="./LICENSE">
-  <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge"/
+  <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge"/>
 </a>
 </h2>
 
@@ -58,15 +58,15 @@
   </h2>
 </div>
 
-<!-- <div id="springlensai-preview">
+<div id="springlensai-preview">
   <h2>
-    <a href="https://www.youtube.com/watch?v=4-Udx0xvsO0" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.youtube.com/watch?v=IWW5MGu5iw4" target="_blank" rel="noopener noreferrer">
       <p><img src="./client/public/springLensAI.png" width="30px" valign="middle"/> SpringLensAI Demo / Preview Video</p>
       <p>🎥 Click here to watch full video on YouTube</p>
     </a>
-    <img src="./frontend/public/videos/springlensaiGIF.gif"  alt="SpringLensAI Video" width="95%"/>
+    <img src="./docs/springlensaiGIF.gif"  alt="SpringLensAI Video" width="95%"/>
   </h2>
-</div> -->
+</div>
 
 <div id="seo-result">
   <h2>
