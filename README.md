@@ -33,6 +33,7 @@
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/Render-00D1FF?style=for-the-badge&logo=render&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google%20Search%20Console-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white"/>
 </a>
 <br/>
 <a href="./LICENSE">
